@@ -1,0 +1,59 @@
+﻿.navbar{
+    padding: 0;
+}
+
+table .bg-primary{
+    color:#fff;
+}
+
+table tr{
+    text-align: center;
+}
+
+ol li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#puntajes-por-preguntas h5{
+    margin-top: 6px;
+}
+
+.titulo-pagina{
+    margin-top: 30px;
+}
+
+#sin-responder, #puntajes-por-preguntas, #tabla-posiciones {
+    margin-top: 10px;
+}
+
+#sin-responder a {
+    font-size: 14px;
+}
+
+#pie{
+    position:absolute;
+    bottom: 0;
+    width:100%;
+    color:#fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#lg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#fondo-login {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    width: 40px !important;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
