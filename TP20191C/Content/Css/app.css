@@ -31,13 +31,13 @@ ol li{
     font-size: 14px;
 }
 
-#pie{
-    position:absolute;
-    bottom: 0;
-    width:100%;
+footer {
+        
     color:#fff;
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 100%;
+    height: auto;
 }
 #lg {
     position: absolute;

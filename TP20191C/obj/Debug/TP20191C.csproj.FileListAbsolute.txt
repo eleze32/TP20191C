@@ -72,3 +72,155 @@ c:\users\eze studio\documents\visual studio 2017\Projects\TP20191C\TP20191C\bin\
 c:\users\eze studio\documents\visual studio 2017\Projects\TP20191C\TP20191C\obj\Debug\TP20191C.csprojResolveAssemblyReference.cache
 c:\users\eze studio\documents\visual studio 2017\Projects\TP20191C\TP20191C\obj\Debug\TP20191C.dll
 c:\users\eze studio\documents\visual studio 2017\Projects\TP20191C\TP20191C\obj\Debug\TP20191C.pdb
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\ApplicationInsights.config
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\csc.exe
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\csc.exe.config
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\csc.rsp
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\csi.exe
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\csi.rsp
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\System.AppContext.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\vbc.exe
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\vbc.exe.config
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\vbc.rsp
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\VBCSCompiler.exe
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\TP20191C.dll.config
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\TP20191C.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\TP20191C.pdb
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Antlr3.Runtime.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.Web.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.ApplicationInsights.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Newtonsoft.Json.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.Helpers.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.Mvc.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.Optimization.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.Razor.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.WebPages.Deployment.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.WebPages.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.WebPages.Razor.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\WebGrease.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.Helpers.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.Mvc.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.Optimization.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.Razor.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.WebPages.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.WebPages.Deployment.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\System.Web.WebPages.Razor.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Antlr3.Runtime.pdb
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Newtonsoft.Json.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.ApplicationInsights.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\Microsoft.AI.Web.xml
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\es\System.Web.Helpers.resources.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\es\System.Web.Mvc.resources.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\es\System.Web.Optimization.resources.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\es\System.Web.Razor.resources.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\es\System.Web.WebPages.resources.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\obj\Debug\TP20191C.csprojAssemblyReference.cache
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\obj\Debug\TP20191C.csproj.CoreCompileInputs.cache
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\obj\Debug\TP20191C.csproj.CopyComplete
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\obj\Debug\TP20191C.dll
+C:\Users\el-ez\Documents\Visual Studio 2017\Projects\TP20191C\TP20191C\obj\Debug\TP20191C.pdb
+D:\Proyectos\TP20191C\TP20191C\bin\ApplicationInsights.config
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\csc.exe
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\csc.exe.config
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\csc.rsp
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\csi.exe
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\csi.rsp
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\System.AppContext.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\System.Collections.Immutable.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\System.IO.FileSystem.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\System.Reflection.Metadata.dll
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\vbc.exe
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\vbc.exe.config
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\vbc.rsp
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\VBCSCompiler.exe
+D:\Proyectos\TP20191C\TP20191C\bin\roslyn\VBCSCompiler.exe.config
+D:\Proyectos\TP20191C\TP20191C\bin\TP20191C.dll.config
+D:\Proyectos\TP20191C\TP20191C\bin\TP20191C.dll
+D:\Proyectos\TP20191C\TP20191C\bin\TP20191C.pdb
+D:\Proyectos\TP20191C\TP20191C\bin\Antlr3.Runtime.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.DependencyCollector.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.Web.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.WindowsServer.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.ApplicationInsights.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.Web.Infrastructure.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Newtonsoft.Json.dll
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.Helpers.dll
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.Mvc.dll
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.Optimization.dll
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.Razor.dll
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.WebPages.Deployment.dll
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.WebPages.dll
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.WebPages.Razor.dll
+D:\Proyectos\TP20191C\TP20191C\bin\WebGrease.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.Helpers.xml
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.Mvc.xml
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.Optimization.xml
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.Razor.xml
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.WebPages.xml
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.WebPages.Deployment.xml
+D:\Proyectos\TP20191C\TP20191C\bin\System.Web.WebPages.Razor.xml
+D:\Proyectos\TP20191C\TP20191C\bin\Antlr3.Runtime.pdb
+D:\Proyectos\TP20191C\TP20191C\bin\Newtonsoft.Json.xml
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.ApplicationInsights.xml
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.DependencyCollector.xml
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.WindowsServer.xml
+D:\Proyectos\TP20191C\TP20191C\bin\Microsoft.AI.Web.xml
+D:\Proyectos\TP20191C\TP20191C\bin\es\System.Web.Helpers.resources.dll
+D:\Proyectos\TP20191C\TP20191C\bin\es\System.Web.Mvc.resources.dll
+D:\Proyectos\TP20191C\TP20191C\bin\es\System.Web.Optimization.resources.dll
+D:\Proyectos\TP20191C\TP20191C\bin\es\System.Web.Razor.resources.dll
+D:\Proyectos\TP20191C\TP20191C\bin\es\System.Web.WebPages.resources.dll
+D:\Proyectos\TP20191C\TP20191C\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Proyectos\TP20191C\TP20191C\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Proyectos\TP20191C\TP20191C\obj\Debug\TP20191C.csprojAssemblyReference.cache
+D:\Proyectos\TP20191C\TP20191C\obj\Debug\TP20191C.csproj.CoreCompileInputs.cache
+D:\Proyectos\TP20191C\TP20191C\obj\Debug\TP20191C.csproj.CopyComplete
+D:\Proyectos\TP20191C\TP20191C\obj\Debug\TP20191C.dll
+D:\Proyectos\TP20191C\TP20191C\obj\Debug\TP20191C.pdb

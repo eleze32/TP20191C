@@ -29,6 +29,11 @@ namespace TP20191C
                 "~/Content/Scripts/DataTable/dataTables.bootstrap4.min.js"
                     ));
 
+            bundles.Add(
+                new ScriptBundle("~/bundles/js").Include(
+                         "~/Content/Scripts/app.js"
+                    )
+                );
             bundles.Add(new ScriptBundle("~/bundles/admin-pregutas").Include(
                 "~/Content/Scripts/admin-preguntas/admin-preguntas.js"
                     ));

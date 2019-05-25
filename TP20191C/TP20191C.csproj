@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -157,6 +158,7 @@
     <Content Include="Content\Css\Fontawesome\all.css" />
     <Content Include="Content\Css\Fontawesome\all.min.css" />
     <Content Include="Content\Scripts\admin-preguntas\admin-preguntas.js" />
+    <Content Include="Content\Scripts\app.js" />
     <Content Include="Content\Scripts\DataTable\dataTables.bootstrap4.min.js" />
     <Content Include="Content\Scripts\DataTable\jquery.dataTables.min.js" />
     <Content Include="Content\webfonts\fa-brands-400.svg" />
@@ -192,7 +194,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\BaseLayout.cshtml" />
     <Content Include="Views\Home\Inicio.cshtml" />
     <Content Include="Views\Shared\AnonimoLayout.cshtml" />
