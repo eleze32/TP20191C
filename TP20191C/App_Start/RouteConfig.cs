@@ -13,7 +13,7 @@ namespace TP20191C
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
+           /* routes.MapRoute(
                 name: "Profesor_listado_Preguntas",
                 url: "profesor/Preguntas",
                 defaults: new { controller = "Preguntas", action = "Administrar", id = UrlParameter.Optional }
@@ -29,7 +29,7 @@ namespace TP20191C
                 name: "Alumno",
                 url: "alumno/{controller}/{action}/{id}",
                 defaults: new { controller = "Preguntas", action = "Administrar", id = UrlParameter.Optional }
-            );
+            );*/
 
             routes.MapRoute(
                 name: "Default",

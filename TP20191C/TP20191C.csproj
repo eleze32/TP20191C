@@ -142,8 +142,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlumnosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PreguntasController.cs" />
+    <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Controllers\RepuestasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -163,6 +165,7 @@
     <Content Include="Content\Scripts\Bootstrap\bootstrap.min.js" />
     <Content Include="Content\Scripts\DataTable\dataTables.bootstrap4.min.js" />
     <Content Include="Content\Scripts\DataTable\jquery.dataTables.min.js" />
+    <Content Include="Content\Scripts\ResponderPreguntas\responder.js" />
     <Content Include="Content\Scripts\tinymce\jquery.tinymce.min.js" />
     <Content Include="Content\Scripts\tinymce\license.txt" />
     <Content Include="Content\Scripts\tinymce\plugins\advlist\plugin.min.js" />
@@ -260,9 +263,9 @@
     <Content Include="Views\Shared\ProfesoresLayout.cshtml" />
     <Content Include="Views\Shared\AlumnosLayout.cshtml" />
     <Content Include="Views\Shared\pv_Footer.cshtml" />
-    <Content Include="Views\Preguntas\Crear.cshtml" />
+    <Content Include="Views\Profesor\CrearPregunta.cshtml" />
     <Content Include="Views\Home\Ingresar.cshtml" />
-    <Content Include="Views\Preguntas\Administrar.cshtml" />
+    <Content Include="Views\Profesor\AdministrarPreguntas.cshtml" />
     <Content Include="Content\webfonts\fa-brands-400.eot" />
     <Content Include="Content\webfonts\fa-brands-400.ttf" />
     <Content Include="Content\webfonts\fa-brands-400.woff" />
@@ -275,17 +278,17 @@
     <Content Include="Content\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\webfonts\fa-solid-900.woff" />
     <Content Include="Content\webfonts\fa-solid-900.woff2" />
-    <Content Include="Views\Preguntas\Modificar.cshtml" />
-    <Content Include="Views\Repuestas\Evaluar.cshtml" />
-    <Content Include="Views\Preguntas\VerPreguntasAlumnos.cshtml" />
-    <Content Include="Views\Preguntas\Responder.cshtml" />
+    <Content Include="Views\Profesor\ModificarPregunta.cshtml" />
+    <Content Include="Views\Profesor\EvaluarRepuesta.cshtml" />
+    <Content Include="Views\Alumnos\VerPreguntas.cshtml" />
+    <Content Include="Views\Alumnos\ResponderPregunta.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_jquery_full.cshtml" />
     <Content Include="Content\Scripts\tinymce\langs\readme.md" />
     <Content Include="Content\Scripts\tinymce\skins\ui\oxide\fonts\tinymce-mobile.woff" />
+    <Content Include="Views\Alumnos\VerRepuesta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Scripts\NewFolder1\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

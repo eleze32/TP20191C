@@ -15,6 +15,10 @@ namespace TP20191C
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Content/Scripts/JqueryValidate/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/TinyMce").Include(
+                        "~/Content/Scripts/tinymce/tinymce.min.js",
+                        "~/Content/Scripts/ResponderPreguntas/responder.js"));
+
             // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información. De este modo, estará
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

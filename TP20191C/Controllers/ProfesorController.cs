@@ -6,46 +6,36 @@ using System.Web.Mvc;
 
 namespace TP20191C.Controllers
 {
-    public class PreguntasController : Controller
+    public class ProfesorController : Controller
     {
-        // GET: Preguntas
-        public ActionResult Index()
-        {
-            return View();
-        }
+        // GET: Profesor
 
         //Profesor Crea Repuesta
-        public ActionResult Crear()
+        public ActionResult CrearPregunta()
         {
             return View();
         }
 
         //Profesor ve todas las preguntas hechas por él
-        public ActionResult Administrar()
+        public ActionResult AdministrarPreguntas()
         {
             return View();
         }
 
         //Profesor modifica una pregunta hecha por él
-        public ActionResult Modificar()
+        public ActionResult ModificarPregunta()
         {
             return View();
         }
 
         //profesor elimina una prgunta hecha por él
-        public ActionResult Eliminar()
+        public ActionResult EliminarPregunta()
         {
             return View();
         }
 
-        // Alumnos ve todas las preguntas, ya sea que no respondio, si respondio, y sus calificaiones
-        public ActionResult VerPreguntasAlumnos()
-        {
-            return View();
-        }
-
-        // Alumno responde pregunta
-        public ActionResult Responder()
+        // profesor evalaua las repuestas, listados de repuestas de alumnos
+        public ActionResult EvaluarRepuestas()
         {
             return View();
         }

@@ -1,16 +1,16 @@
 ﻿
 @{
-    ViewBag.Title = "Responder";
+    ViewBag.Title = "Ver";
     Layout = "~/Views/Shared/AlumnosLayout.cshtml";
 }
 
-<div id="repuesta-pregunta">
+<div id="repuesta-alumno">
     <section>
         <div class="row">
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h5 class="d-inline-block mb-0 ml-4 mt-4"><strong>Clase 6 - Entity Framework</strong></h5>                       
+                        <h6 class="d-inline-block mb-0 ml-4 mt-4"><strong>Clase 6 - Entity Framework</strong></h6>
                     </div>
                 </div>
                 <div class="row">
@@ -20,17 +20,23 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <h5 class="d-inline-block ml-4">Se puede responder hasta: 24/05/2019 23:59:59</h5>
+                        <h2 class="pregunta d-inline-block ml-4 text-success">Correcta | 8° | 900pt | Mejor Repuesta</h2>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
-                @Html.TextArea("Repuesta", new { @class="form-control"})
+                 @Html.TextArea("Repuesta", new { @class = "form-control", @id = "Repuesta" })
+            </div>
+        </div>
+        <div class="row mt-4 mb-5">
+            <div class="col-sm-2">
+                @Html.ActionLink("Volver", "VerPreguntasAlumnos", null, new { @class = "btn btn-danger btn-block" })
             </div>
         </div>
     </section>
 
 </div>
+
 
