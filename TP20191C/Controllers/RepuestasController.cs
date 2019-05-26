@@ -8,7 +8,7 @@ namespace TP20191C.Controllers
 {
     public class RepuestasController : Controller
     {
-        // GET: Repuestas
+        // profesor evalaua las repuestas, listados de repuestas de alumnos
         public ActionResult Evaluar()
         {
             return View();

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Responder";
+    Layout = "~/Views/Shared/AlumnosLayout.cshtml";
+}
+
+<div id="repuesta-pregunta">
+    <section>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h5 class="d-inline-block mb-0 ml-4 mt-4"><strong>Clase 6 - Entity Framework</strong></h5>                       
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="pregunta mb-0">16. ¿Entity Framework solo se puede usar con Sql Server?</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h5 class="d-inline-block ml-4">Se puede responder hasta: 24/05/2019 23:59:59</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                @Html.TextArea("Repuesta", new { @class="form-control"})
+            </div>
+        </div>
+    </section>
+
+</div>
+
