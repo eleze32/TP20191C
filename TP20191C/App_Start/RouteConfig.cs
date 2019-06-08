@@ -13,29 +13,25 @@ namespace TP20191C
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-           /* routes.MapRoute(
-                name: "Profesor_listado_Preguntas",
-                url: "profesor/Preguntas",
-                defaults: new { controller = "Preguntas", action = "Administrar", id = UrlParameter.Optional }
-            );
-
             routes.MapRoute(
-                name: "Profesor",
-                url: "profesor/{controller}/{action}/{id}",
-                defaults: new { controller = "Preguntas", action = "Administrar", id = UrlParameter.Optional }
+                name: "Login",
+                url: "Ingresar",
+                defaults: new
+                {
+                    controller = "Home",
+                    action = "Ingresar",
+                    email = UrlParameter.Optional,
+                    password = UrlParameter.Optional,
+                    soyProfesor = UrlParameter.Optional
+                }
             );
-
-            routes.MapRoute(
-                name: "Alumno",
-                url: "alumno/{controller}/{action}/{id}",
-                defaults: new { controller = "Preguntas", action = "Administrar", id = UrlParameter.Optional }
-            );*/
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Inicio", id = UrlParameter.Optional }
             );
+
         }
     }
 }

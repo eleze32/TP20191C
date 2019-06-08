@@ -4,27 +4,35 @@
     Layout = "~/Views/Shared/AnonimoLayout.cshtml";
 }
 
-<div id="fondo-login" class="bg-gradient-primary">
+<div id="fondo-login" class="bg-secondary">
     <div class="container" id="lg">
 
         <div class="row">
-            <div class="col-sm-6 shadow mx-auto pt-2 bg-gradient-dark">
+            <div class="col-sm-6 shadow mx-auto pt-2 bg-primary">
                 <h2 class="text-center text-white">Ingresar</h2>
             </div>
         </div>
         <div class="row">
-            @using (Html.BeginForm("Ingresar", "Home", FormMethod.Post,new { @class= "col-sm-6 shadow p-3 mb-5 bg-white mx-auto rounded-bottom", @id="form-login"}))
+            @using (Html.BeginForm("Ingresar", "Home", new { ReturnUrl = ViewBag.returnUrl }, FormMethod.Post, new { @class = "col-sm-6 shadow p-3 mb-5 bg-white mx-auto rounded-bottom", @id = "form-login" }))
             {
+                
+                if (ViewBag.MensajeError == true)
+                {
+                    <div id="errorGeneral" name="errorGeneral" class="bg-danger">
+                        <p class="text-white"> Email y/o contraseña invialdas.</p>
+                    </div>
+                }
                 <div class="form-group">
-                    <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp" placeholder="Ingresar email">                   
+
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Ingresar email">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pass-login" aria-describedby="emailHelp" placeholder="Ingresar contraseña">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Ingresar contraseña">
                 </div>
                 <div class="form-group">
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="soy-profesor">
-                        <label class="custom-control-label" for="soy-profesor">Soy profesor</label>
+                        <input type="checkbox" class="custom-control-input" id="soyProfesor" value="true" name="soyProfesor">
+                        <label class="custom-control-label" for="soyProfesor">Soy profesor</label>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Ingresar</button>

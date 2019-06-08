@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace TP20191C.Controllers
 {
+    [Authorize]
     public class ProfesorController : Controller
     {
         // GET: Profesor

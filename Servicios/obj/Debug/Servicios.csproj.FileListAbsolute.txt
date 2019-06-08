@@ -1,0 +1,15 @@
+D:\Proyectos\TP20191C\Servicios\bin\Debug\Servicios.dll.config
+D:\Proyectos\TP20191C\Servicios\bin\Debug\Servicios.dll
+D:\Proyectos\TP20191C\Servicios\bin\Debug\Servicios.pdb
+D:\Proyectos\TP20191C\Servicios\bin\Debug\Entidades.dll
+D:\Proyectos\TP20191C\Servicios\bin\Debug\EntityFramework.dll
+D:\Proyectos\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+D:\Proyectos\TP20191C\Servicios\bin\Debug\Entidades.pdb
+D:\Proyectos\TP20191C\Servicios\bin\Debug\Entidades.dll.config
+D:\Proyectos\TP20191C\Servicios\bin\Debug\EntityFramework.xml
+D:\Proyectos\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.xml
+D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.dll
+D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.pdb

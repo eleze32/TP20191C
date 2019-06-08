@@ -17,7 +17,7 @@ namespace TP20191C
 
             bundles.Add(new ScriptBundle("~/bundles/TinyMce").Include(
                         "~/Content/Scripts/tinymce/tinymce.min.js",
-                        "~/Content/Scripts/ResponderPreguntas/responder.js"));
+                        "~/Content/Scripts/ResponderPreguntas/ResponderPregunta.js"));
 
             // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información. De este modo, estará
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.

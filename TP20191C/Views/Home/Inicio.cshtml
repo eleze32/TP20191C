@@ -1,4 +1,6 @@
-﻿
+﻿@using Entidades
+@model List<Alumno>
+
 @{
     ViewBag.Title = "Inicio";
     Layout = "~/Views/Shared/AlumnosLayout.cshtml";
@@ -45,28 +47,45 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @for (Int32 i = 0; i < 10; i++)
+                            @{int i = 1; }
+
+                            @foreach (Alumno al in Model)
                             {
-                                if ((i + 1) % 2 == 1)
+                                if (al.IdAlumno == (int)Session["UsuarioId"])
                                 {
-                                    <tr class="table-secondary">
-                                        <td>1</td>
-                                        <td>Alejandro Quevedo</td>
-                                        <td>2500</td>
-                                        <td>10</td>
-                                        <td>5</td>
+                                    <tr class="table-success">
+                                        <td>@i</td>
+                                        <td>@al.Nombre @al.Apellido</td>
+                                        <td>@al.PuntosTotales</td>
+                                        <td>@al.CantidadRespuestasCorrectas</td>
+                                        <td>@al.CantidadMejorRespuesta</td>
                                     </tr>
                                 }
                                 else
                                 {
-                                    <tr class="table-primary">
-                                        <td>1</td>
-                                        <td>Alejandro Quevedo</td>
-                                        <td>2500</td>
-                                        <td>10</td>
-                                        <td>5</td>
-                                    </tr>
+                                    if (i % 2 == 1)
+                                    {
+                                        <tr class="table-secondary">
+                                            <td>@i</td>
+                                            <td>@al.Nombre @al.Apellido</td>
+                                            <td>@al.PuntosTotales</td>
+                                            <td>@al.CantidadRespuestasCorrectas</td>
+                                            <td>@al.CantidadMejorRespuesta</td>
+                                        </tr>
+                                    }
+                                    else
+                                    {
+                                        <tr class="table-primary">
+                                            <td>@i</td>
+                                            <td>@al.Nombre @al.Apellido</td>
+                                            <td>@al.PuntosTotales</td>
+                                            <td>@al.CantidadRespuestasCorrectas</td>
+                                            <td>@al.CantidadMejorRespuesta</td>
+                                        </tr>
+                                    }
                                 }
+
+                                i = i + 1;
                             }
                         </tbody>
                     </table>
@@ -79,28 +98,19 @@
         <section id="puntajes-por-preguntas">
             <div class="row">
                 <div class="col-sm-12">
-                    <h4>Pregunta última clase(Clase 5)</h4>
+                    <h4>Preguntas última clase(Clase 5)</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
-                    <h5>14. ¿Qué es un Layout?</h5>
-                    <ol>
-                        @for (int i = 0; i < 12; i++)
-                        {
-                            <li>Nombre y apellido</li>
-                        }
-                    </ol>
-                </div>
-                <div class="col-sm-6">
-                    <h5>13. ¿Qué diferencia hay entre view y partial view?</h5>
-                    <ol>
-                        @for (int i = 0; i < 12; i++)
-                        {
-                            <li>Nombre y apellido</li>
-                        }
-                    </ol>
-                </div>
+
+                @foreach (Pregunta pr in ViewBag.Preguntas)
+                {
+                    <div class="col-sm-6">
+                        <h5>@pr.Nro. @pr.Pregunta1 @pr.Clase.Nombre </h5>
+                    </div>
+
+                }
+
             </div>
         </section>
     </div>
@@ -114,9 +124,9 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            @for (int i = 0; i < 3; i++)
+            @for (int j = 0; j < 3; j++)
             {
-                @Html.ActionLink((i + 10) + ".¿Preguntas siguiente?", "Ver")<br />
+                @Html.ActionLink((j + 10) + ".¿Preguntas siguiente?", "Ver")<br />
             }
         </div>
     </div>

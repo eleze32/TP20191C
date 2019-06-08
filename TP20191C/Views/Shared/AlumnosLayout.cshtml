@@ -3,40 +3,40 @@
 }
 
 <div>
-    
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="cabecera">
-    <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="#">Inicio </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Preguntas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca De</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav mr-auto my-2 my-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nombre Alumno(Alumno)</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Salir</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="cabecera">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Inicio </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Preguntas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca De</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">@Session["Usuario"] (Alumno)</a>
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Salir", "Salir", "Home", null, new { @class = "nav-link" })
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+    <div class="container contenido">
+        @RenderBody()
     </div>
-</nav>
-<div class="container contenido">
-    @RenderBody()
-</div>
 </div>
 
 @Html.Partial("pv_Footer")

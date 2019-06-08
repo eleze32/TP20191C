@@ -224,3 +224,13 @@ D:\Proyectos\TP20191C\TP20191C\obj\Debug\TP20191C.csproj.CoreCompileInputs.cache
 D:\Proyectos\TP20191C\TP20191C\obj\Debug\TP20191C.csproj.CopyComplete
 D:\Proyectos\TP20191C\TP20191C\obj\Debug\TP20191C.dll
 D:\Proyectos\TP20191C\TP20191C\obj\Debug\TP20191C.pdb
+D:\Proyectos\TP20191C\TP20191C\bin\Entidades.dll
+D:\Proyectos\TP20191C\TP20191C\bin\EntityFramework.dll
+D:\Proyectos\TP20191C\TP20191C\bin\EntityFramework.SqlServer.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Servicios.dll
+D:\Proyectos\TP20191C\TP20191C\bin\Entidades.pdb
+D:\Proyectos\TP20191C\TP20191C\bin\Entidades.dll.config
+D:\Proyectos\TP20191C\TP20191C\bin\Servicios.pdb
+D:\Proyectos\TP20191C\TP20191C\bin\Servicios.dll.config
+D:\Proyectos\TP20191C\TP20191C\bin\EntityFramework.xml
+D:\Proyectos\TP20191C\TP20191C\bin\EntityFramework.SqlServer.xml

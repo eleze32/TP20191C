@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace TP20191C.Controllers
-{
+{   
+    [Authorize]
     public class AlumnosController : Controller
     {
         // alumno ve su repuesta
