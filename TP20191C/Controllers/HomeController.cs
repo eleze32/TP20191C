@@ -15,18 +15,18 @@ namespace TP20191C.Controllers
         [Authorize]
         public ActionResult Inicio()
         {
-            /*if(Session["Usuario"] != null)
-            {*/
+            if(Session["Usuario"] != null)
+            {
             List<Alumno> al = AlumnoServicio.TablaPosiciones();
 
-            ViewBag.Preguntas = PreguntasServicio.ultimasDospreguntas();
+            ViewBag.Preguntas = PreguntasServicio.UltimasDospreguntas();
 
 
 
             return View(al);
-            /*}*/
+            }
 
-            /*return View();*/
+            return Redirect("/Ingresar");
         }
 
         public ActionResult Ingresar(String returnUrl)
@@ -38,7 +38,7 @@ namespace TP20191C.Controllers
         [HttpPost]
         public ActionResult Ingresar(string email, string password, string returnUrl, bool soyProfesor = false)
         {
-            bool login = UsuarioServicio.ingresar(email, password, soyProfesor);
+            bool login = UsuarioServicio.Ingresar(email, password, soyProfesor);
 
             if (login)
             {
@@ -48,9 +48,15 @@ namespace TP20191C.Controllers
                     return Redirect(returnUrl);
 
                 if (soyProfesor)
+                {
                     return RedirectToAction("AdministrarPreguntas", "Profesor");
-
-                return RedirectToAction("Inicio", "Home");
+                }                    
+                else
+                {
+                    ViewBag.soyProfesor = soyProfesor;
+                    return RedirectToAction("Inicio", "Home");
+                }
+                   
             }
 
             ViewBag.returnUrl = returnUrl;

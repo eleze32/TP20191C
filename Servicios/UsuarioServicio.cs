@@ -10,7 +10,7 @@ namespace Servicios
 {
     public class UsuarioServicio
     {
-        public static bool ingresar(string email, string pass, bool soyProf)
+        public static bool Ingresar(string email, string pass, bool soyProf)
         {
             TP_20191CEntities ctx = new TP_20191CEntities();
 

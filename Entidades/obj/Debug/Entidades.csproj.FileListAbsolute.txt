@@ -10,3 +10,15 @@ D:\Proyectos\TP20191C\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cac
 D:\Proyectos\TP20191C\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 D:\Proyectos\TP20191C\Entidades\obj\Debug\Entidades.dll
 D:\Proyectos\TP20191C\Entidades\obj\Debug\Entidades.pdb
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\bin\Debug\Entidades.dll
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\bin\Debug\Entidades.pdb
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\obj\Debug\Entidades.dll
+C:\Users\usuario\source\repos\TP20191C\tp20191c\Entidades\obj\Debug\Entidades.pdb
