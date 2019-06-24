@@ -121,13 +121,15 @@
         <div class="col-sm-12">
             <h2>Preguntas sin responder.</h2>
         </div>
+        @foreach (TP20191C.Models.PreguntaRespuestaAlumno p in ViewBag.SinResponder)
+        {
+            <div class="col-sm-12">
+                <h5>@p.Nro. @p.Pregunta . @p.IdAlumno </h5>
+            </div>
+
+        }
     </div>
     <div class="row">
-        <div class="col-sm-12">
-            @for (int j = 0; j < 3; j++)
-            {
-                @Html.ActionLink((j + 10) + ".¿Preguntas siguiente?", "Ver")<br />
-            }
-        </div>
+
     </div>
 </section>

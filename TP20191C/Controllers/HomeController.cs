@@ -6,6 +6,7 @@ using System.Web.Security;
 using System.Web.Mvc;
 using Entidades;
 using Servicios;
+using TP20191C.Models;
 
 namespace TP20191C.Controllers
 {
@@ -20,8 +21,8 @@ namespace TP20191C.Controllers
             List<Alumno> al = AlumnoServicio.TablaPosiciones();
 
             ViewBag.Preguntas = PreguntasServicio.ultimasDospreguntas();
-
-
+            
+            ViewBag.SinResponder = PreguntasServicio.preguntasSinResponder((int)Session["UsuarioId"]);
 
             return View(al);
             /*}*/
@@ -36,13 +37,18 @@ namespace TP20191C.Controllers
         }
 
         [HttpPost]
-        public ActionResult Ingresar(string email, string password, string returnUrl, bool soyProfesor = false)
+        public ActionResult Ingresar(Usuario usuario, string returnUrl, bool soyProfesor = false)
         {
-            bool login = UsuarioServicio.ingresar(email, password, soyProfesor);
+            if (!ModelState.IsValid)
+            {
+                return View(usuario);
+            }
+
+            bool login = UsuarioServicio.ingresar(usuario.Email, usuario.Password, soyProfesor);
 
             if (login)
             {
-                FormsAuthentication.SetAuthCookie(email, false);
+                FormsAuthentication.SetAuthCookie(usuario.Email, false);
 
                 if (Url.IsLocalUrl(returnUrl))
                     return Redirect(returnUrl);

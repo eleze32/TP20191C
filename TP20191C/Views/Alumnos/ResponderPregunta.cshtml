@@ -1,10 +1,11 @@
-﻿
+﻿@using Entidades
 @{
     ViewBag.Title = "Responder";
     Layout = "~/Views/Shared/AlumnosLayout.cshtml";
 }
 
 @Scripts.Render("~/bundles/TinyMce")
+@model Entidades.RespuestaAlumno
 
 <div id="repuesta-pregunta">
     <section>
@@ -12,38 +13,45 @@
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h6 class="d-inline-block mb-0 ml-4 mt-4"><strong>Clase 6 - Entity Framework</strong></h6>
+                        <h6 class="d-inline-block mb-0 ml-4 mt-4"><strong>@ViewBag.Pregunta.Clase.Nombre - @ViewBag.Pregunta.Tema.Nombre</strong></h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2 class="pregunta mb-0">16. ¿Entity Framework solo se puede usar con Sql Server?</h2>
+                        <h2 class="pregunta mb-0">@ViewBag.Pregunta.Nro . @ViewBag.Pregunta.Pregunta1</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <h6 class="d-inline-block ml-4">Se puede responder hasta: 24/05/2019 23:59:59</h6>
+                        <h6 class="d-inline-block ml-4">Se puede responder hasta: @ViewBag.Pregunta.FechaDisponibleHasta</h6>
                     </div>
                 </div>
             </div>
         </div>
-        @using (Html.BeginForm("Responder","Pregunta",FormMethod.Post))
+        @using (Html.BeginForm("ResponderPregunta", "Alumnos", FormMethod.Post))
         {
             <div class="row">
                 <div class="col-sm-12">
-                    @Html.TextArea("Repuesta", new { @class = "form-control", @id = "Repuesta" })
+                    @Html.HiddenFor(o => o.IdPregunta, new {Value = ViewBag.Pregunta.IdPregunta})
+                    @if (ViewBag.Fecha)
+                    {@Html.TextAreaFor(o => o.Respuesta, new { @class = "form-control", @id = "Repuesta", @readonly = "readonly" })}
+                else
+                {@Html.TextAreaFor(o => o.Respuesta, new { @class = "form-control", @id = "Repuesta" })}
                 </div>
             </div>
             <div class="row mt-4 mb-5">
                 <div class="col-sm-2">
-                    <input type="submit" class="btn btn-success btn-block" value="Enviar repuesta" />
+                    @if (ViewBag.Fecha)
+                    {<h5 class="text-danger">Se ha vencido el plazo para responder a esta pregunta.</h5> }
+                    else
+                    { <input type="submit" class="btn btn-success btn-block" value="Enviar repuesta" />}
+
                 </div>
                 <div class="col-sm-2">
-                    @Html.ActionLink("Volver", "VerPreguntasAlumnos",null,new { @class="btn btn-danger btn-block"})
+                    @Html.ActionLink("Volver", "VerPreguntas", "Alumnos", null, new { @class = "btn btn-danger btn-block" })
                 </div>
             </div>
         }
     </section>
-
 </div>
 

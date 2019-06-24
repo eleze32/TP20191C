@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlumnoServicio.cs" />
+    <Compile Include="EmailServicio.cs" />
+    <Compile Include="ModelsDTO\ListarVerPreguntas.cs" />
+    <Compile Include="ModelsDTO\PreguntaRespuestaAlumno.cs" />
     <Compile Include="PreguntasServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioServicio.cs" />

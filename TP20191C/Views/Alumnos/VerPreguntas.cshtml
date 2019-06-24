@@ -1,4 +1,4 @@
-﻿
+﻿@using Entidades
 @{
     ViewBag.Title = "VerPreguntasAlumnos";
     Layout = "~/Views/Shared/AlumnosLayout.cshtml";
@@ -14,58 +14,187 @@
     </section>
     <section id="texto-filtros">
         <div class="row">
-            <div class="col-sm-9">
+            <div class="col-sm-12">
                 <p>
                     Recuerda que cuanto antes responda correctamente, mas chance tiene de sumar un mejor puntajes,
                     y su tu repuesta es la más completa,recibirás un puntaje bonus!
                 </p>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Todas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sin corregir</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Correctas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Regular</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Mal</a>
-                        </li>
-                    </ul>
+        </div>
+        <div class="container">
+            
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a data-toggle="tab" href="#Todas">Todas </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#SinCorregir">Sin corregir </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#Correctas">Correctas </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#Regular">Regular </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#Mal">Mal </a>
+                    </li>
+                </ul>
+            
+
+            <br />
+            <!--</section>-->
+            <div class="tab-content">
+                <div id="Todas" class="tab-pane fade in active show">
+                    @Html.ActionLink("Responder", "ponerALgo", null, new { @class = "text-info" })
+                    @foreach (Servicios.ModelsDTO.ListarVerPreguntas l in ViewBag.Todas)
+                    {
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row ml-4 mt-4">
+                                    <div class="col-sm-12">
+                                        <p class="d-inline-block mb-0"><strong>@l.Clase - @l.Tema</strong></p>
+                                        <p class="d-inline-block mb-0">Hasta @l.Fecha</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <p class="pregunta">@l.Nro. @l.Pregunta</p>
+                                    </div>
+                                    <div class-sm-5> 
+                                        <p class="d-inline-block text-success">
+                                            @if (l.Orden == 0)
+                                            {@Html.ActionLink("Responder", "ResponderPregunta", "Alumnos", new { id = l.IdPregunta }, new { @class = "text-info" })}
+                                            else
+                                            {
+                                            @Html.ActionLink("Ver", "VerRespuesta", "Alumnos", new { id = l.IdPregunta }, new { @class = "text-info" })<span> | </span>}
+                                            @if (l.Resultado.Equals("0") && l.Orden != 0)
+                                            {<span>Correccion Pendiente!</span>} | @if (l.Resultado.Equals("NULL"))
+                                            { }
+                                            else
+                                            {@l.Resultado} | @if (l.Resultado.Equals("NULL"))
+                                            { }
+                                            else
+                                            {@l.Orden <span>° |</span>} @if (l.Resultado.Equals("NULL"))
+                                            { }
+                                            else
+                                            {@l.Puntos <span>pts |</span>} @if (l.MejorRespuesta)
+                                            {<span>Mejor Respuesta!!!!</span>}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div id="SinCorregir" class="tab-pane">
+                    @foreach (Servicios.ModelsDTO.ListarVerPreguntas l in ViewBag.SinCorregir)
+                    {
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row ml-4 mt-4">
+                                    <div class="col-sm-12">
+                                        <p class="d-inline-block mb-0"><strong>@l.Clase - @l.Tema</strong></p>
+                                        <p class="d-inline-block mb-0">Hasta @l.Fecha</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <p class="pregunta">@l.Nro. @l.Pregunta</p>
+                                    </div>
+                                    <div class-sm-5>
+                                        <p class="d-inline-block text-success">
+                                            @Html.ActionLink("Ver", "VerRespuesta", "Alumnos", new { id = l.IdPregunta }, new { @class = "text-info" }) | Correccion Pendiente! | @l.Resultado | @l.Orden ° | @l.Puntos pts | @if (l.MejorRespuesta)
+                                            {<span>Mejor Respuesta!!!!</span>}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div id="Correctas" class="tab-pane">
+                    @foreach (Servicios.ModelsDTO.ListarVerPreguntas l in ViewBag.Correctas)
+                    {
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row ml-4 mt-4">
+                                    <div class="col-sm-12">
+                                        <p class="d-inline-block mb-0"><strong>@l.Clase - @l.Tema</strong></p>
+                                        <p class="d-inline-block mb-0">Hasta @l.Fecha</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <p class="pregunta">@l.Nro. @l.Pregunta</p>
+                                    </div>
+                                    <div class-sm-5>
+                                        <p class="d-inline-block text-success">
+                                            @Html.ActionLink("Ver", "VerRespuesta", "Alumnos", new { id = l.IdPregunta }, new { @class = "text-info" }) | @l.Resultado | @l.Orden ° | @l.Puntos pts | @if (l.MejorRespuesta)
+                                            {<span>Mejor Respuesta!!!!</span>}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div id="Regular" class="tab-pane">
+                    @foreach (Servicios.ModelsDTO.ListarVerPreguntas l in ViewBag.Regular)
+                    {
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row ml-4 mt-4">
+                                    <div class="col-sm-12">
+                                        <p class="d-inline-block mb-0"><strong>@l.Clase - @l.Tema</strong></p>
+                                        <p class="d-inline-block mb-0">Hasta @l.Fecha</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <p class="pregunta">@l.Nro. @l.Pregunta</p>
+                                    </div>
+                                    <div class-sm-5>
+                                        <p class="d-inline-block text-success">
+                                            @Html.ActionLink("Ver", "VerRespuesta", "Alumnos", new { id= l.IdPregunta }, new { @class = "text-info" }) | @l.Resultado | @l.Orden ° | @l.Puntos pts | @if (l.MejorRespuesta)
+                                            {<span>Mejor Respuesta!!!!</span>}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div id="Mal" class="tab-pane">
+                    
+                    @foreach (Servicios.ModelsDTO.ListarVerPreguntas l in ViewBag.Mal)
+                    {
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row ml-4 mt-4">
+                                    <div class="col-sm-12">
+                                        <p class="d-inline-block mb-0"><strong>@l.Clase - @l.Tema</strong></p>
+                                        <p class="d-inline-block mb-0">Hasta @l.Fecha</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <p class="pregunta">@l.Nro. @l.Pregunta</p>
+                                    </div>
+                                    <div class-sm-5>
+
+                                        @Html.ActionLink("Ver", "ponerALgo", null, new { @class = "text-info" })
+                                        <p class="d-inline-block text-success">
+                                            @Html.ActionLink("Ver", "VerRespuesta", "Alumnos", new { id = l.IdPregunta }, new { @class = "text-info" }) | @l.Resultado | @l.Orden ° | @l.Puntos pts | @if (l.MejorRespuesta)
+                                            {<span>Mejor Respuesta!!!!</span>}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
-    </section>
-    <section id="preguntas-alumnos">
-        @for (int i = 16; i > 0; i--)
-        {
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="row ml-4 mt-4">
-                        <div class="col-sm-12">
-                            <p class="d-inline-block mb-0"><strong>Clase 6 - Entity Framework</strong></p>
-                            <p class="d-inline-block mb-0">Hasta 24/05/2019 23:59:59</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-7">
-                            <p class="pregunta">@i. ¿Entity Framework solo se puede usar con Sql Server?</p>
-                        </div>
-                        <div class-sm-5>
-                            @Html.ActionLink("Responder", "ponerALgo",null,new { @class="text-info"})
-                            @Html.ActionLink("Ver", "ponerALgo", null, new { @class = "text-info" })
-                            <p class="d-inline-block text-success"> Correcta | 8° | 1000pts | Mejor Repuesta</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-    </section>
 </div>
+

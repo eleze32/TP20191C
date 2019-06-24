@@ -154,6 +154,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -251,7 +252,9 @@
     <Content Include="Content\Scripts\modernizr-2.6.2.js" />
     <Content Include="Content\Scripts\Respond\respond.js" />
     <Content Include="Content\Scripts\Respond\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -289,11 +292,10 @@
     <Content Include="Views\Shared\EditorTemplates\tinymce_jquery_full.cshtml" />
     <Content Include="Content\Scripts\tinymce\langs\readme.md" />
     <Content Include="Content\Scripts\tinymce\skins\ui\oxide\fonts\tinymce-mobile.woff" />
-    <Content Include="Views\Alumnos\VerRepuesta.cshtml" />
+    <Content Include="Views\Alumnos\VerRespuesta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

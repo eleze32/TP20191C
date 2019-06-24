@@ -32,6 +32,11 @@ namespace TP20191C
                 defaults: new { controller = "Home", action = "Inicio", id = UrlParameter.Optional }
             );
 
+            routes.MapRoute(
+                name: "VerRespuesta",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Alumnos", action = "VerRespuesta", id = UrlParameter.Optional }
+            );
         }
     }
 }
