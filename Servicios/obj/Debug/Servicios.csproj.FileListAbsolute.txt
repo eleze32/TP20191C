@@ -13,3 +13,18 @@ D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cac
 D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.csproj.CopyComplete
 D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.dll
 D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.pdb
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\Servicios.dll.config
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\Servicios.dll
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\Servicios.pdb
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\Entidades.dll
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\EntityFramework.dll
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\Entidades.pdb
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\Entidades.dll.config
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\EntityFramework.xml
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.xml
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\obj\Debug\Servicios.dll
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Servicios\obj\Debug\Servicios.pdb

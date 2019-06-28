@@ -4,91 +4,91 @@
     <EntitySetMapping Name="Alumno">
       <EntityTypeMapping TypeName="TP_20191CModel.Alumno">
         <MappingFragment StoreEntitySet="Alumno">
-          <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-          <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
-          <ScalarProperty Name="PuntosTotales" ColumnName="PuntosTotales" />
-          <ScalarProperty Name="CantidadRespuestasCorrectas" ColumnName="CantidadRespuestasCorrectas" />
-          <ScalarProperty Name="CantidadRespuestasRegular" ColumnName="CantidadRespuestasRegular" />
-          <ScalarProperty Name="CantidadRespuestasMal" ColumnName="CantidadRespuestasMal" />
-          <ScalarProperty Name="CantidadMejorRespuesta" ColumnName="CantidadMejorRespuesta" />
           <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
+          <ScalarProperty Name="CantidadMejorRespuesta" ColumnName="CantidadMejorRespuesta" />
+          <ScalarProperty Name="CantidadRespuestasMal" ColumnName="CantidadRespuestasMal" />
+          <ScalarProperty Name="CantidadRespuestasRegular" ColumnName="CantidadRespuestasRegular" />
+          <ScalarProperty Name="CantidadRespuestasCorrectas" ColumnName="CantidadRespuestasCorrectas" />
+          <ScalarProperty Name="PuntosTotales" ColumnName="PuntosTotales" />
+          <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Clase">
       <EntityTypeMapping TypeName="TP_20191CModel.Clase">
         <MappingFragment StoreEntitySet="Clase">
-          <ScalarProperty Name="IdClase" ColumnName="IdClase" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdClase" ColumnName="IdClase" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Pregunta">
       <EntityTypeMapping TypeName="TP_20191CModel.Pregunta">
         <MappingFragment StoreEntitySet="Pregunta">
-          <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
-          <ScalarProperty Name="Nro" ColumnName="Nro" />
-          <ScalarProperty Name="IdClase" ColumnName="IdClase" />
-          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
-          <ScalarProperty Name="FechaDisponibleDesde" ColumnName="FechaDisponibleDesde" />
-          <ScalarProperty Name="FechaDisponibleHasta" ColumnName="FechaDisponibleHasta" />
-          <ScalarProperty Name="Pregunta1" ColumnName="Pregunta" />
-          <ScalarProperty Name="IdProfesorCreacion" ColumnName="IdProfesorCreacion" />
-          <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
-          <ScalarProperty Name="IdProfesorModificacion" ColumnName="IdProfesorModificacion" />
           <ScalarProperty Name="FechaHoraModificacion" ColumnName="FechaHoraModificacion" />
+          <ScalarProperty Name="IdProfesorModificacion" ColumnName="IdProfesorModificacion" />
+          <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
+          <ScalarProperty Name="IdProfesorCreacion" ColumnName="IdProfesorCreacion" />
+          <ScalarProperty Name="Pregunta1" ColumnName="Pregunta" />
+          <ScalarProperty Name="FechaDisponibleHasta" ColumnName="FechaDisponibleHasta" />
+          <ScalarProperty Name="FechaDisponibleDesde" ColumnName="FechaDisponibleDesde" />
+          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
+          <ScalarProperty Name="IdClase" ColumnName="IdClase" />
+          <ScalarProperty Name="Nro" ColumnName="Nro" />
+          <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Profesor">
       <EntityTypeMapping TypeName="TP_20191CModel.Profesor">
         <MappingFragment StoreEntitySet="Profesor">
-          <ScalarProperty Name="IdProfesor" ColumnName="IdProfesor" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-          <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
           <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
+          <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IdProfesor" ColumnName="IdProfesor" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RespuestaAlumno">
       <EntityTypeMapping TypeName="TP_20191CModel.RespuestaAlumno">
         <MappingFragment StoreEntitySet="RespuestaAlumno">
-          <ScalarProperty Name="IdRespuestaAlumno" ColumnName="IdRespuestaAlumno" />
-          <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
-          <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
-          <ScalarProperty Name="FechaHoraRespuesta" ColumnName="FechaHoraRespuesta" />
-          <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
-          <ScalarProperty Name="Orden" ColumnName="Orden" />
-          <ScalarProperty Name="IdProfesorEvaluador" ColumnName="IdProfesorEvaluador" />
-          <ScalarProperty Name="FechaHoraEvaluacion" ColumnName="FechaHoraEvaluacion" />
-          <ScalarProperty Name="IdResultadoEvaluacion" ColumnName="IdResultadoEvaluacion" />
-          <ScalarProperty Name="RespuestasCorrectasHastaElMomento" ColumnName="RespuestasCorrectasHastaElMomento" />
-          <ScalarProperty Name="Puntos" ColumnName="Puntos" />
           <ScalarProperty Name="MejorRespuesta" ColumnName="MejorRespuesta" />
+          <ScalarProperty Name="Puntos" ColumnName="Puntos" />
+          <ScalarProperty Name="RespuestasCorrectasHastaElMomento" ColumnName="RespuestasCorrectasHastaElMomento" />
+          <ScalarProperty Name="IdResultadoEvaluacion" ColumnName="IdResultadoEvaluacion" />
+          <ScalarProperty Name="FechaHoraEvaluacion" ColumnName="FechaHoraEvaluacion" />
+          <ScalarProperty Name="IdProfesorEvaluador" ColumnName="IdProfesorEvaluador" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+          <ScalarProperty Name="FechaHoraRespuesta" ColumnName="FechaHoraRespuesta" />
+          <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
+          <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+          <ScalarProperty Name="IdRespuestaAlumno" ColumnName="IdRespuestaAlumno" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ResultadoEvaluacion">
       <EntityTypeMapping TypeName="TP_20191CModel.ResultadoEvaluacion">
         <MappingFragment StoreEntitySet="ResultadoEvaluacion">
-          <ScalarProperty Name="IdResultadoEvaluacion" ColumnName="IdResultadoEvaluacion" />
           <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="IdResultadoEvaluacion" ColumnName="IdResultadoEvaluacion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Tema">
       <EntityTypeMapping TypeName="TP_20191CModel.Tema">
         <MappingFragment StoreEntitySet="Tema">
-          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

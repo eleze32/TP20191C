@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TP_20191CModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TP_20191CModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Alumno">
           <Key>
             <PropertyRef Name="IdAlumno" />
@@ -226,20 +226,60 @@
             <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TP_20191CModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TP_20191CEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Alumno" EntityType="TP_20191CModel.Alumno" />
+          <EntitySet Name="Clase" EntityType="TP_20191CModel.Clase" />
+          <EntitySet Name="Pregunta" EntityType="TP_20191CModel.Pregunta" />
+          <EntitySet Name="Profesor" EntityType="TP_20191CModel.Profesor" />
+          <EntitySet Name="RespuestaAlumno" EntityType="TP_20191CModel.RespuestaAlumno" />
+          <EntitySet Name="ResultadoEvaluacion" EntityType="TP_20191CModel.ResultadoEvaluacion" />
+          <EntitySet Name="Tema" EntityType="TP_20191CModel.Tema" />
+          <AssociationSet Name="FK_RespuestaAlumno_Alumno" Association="TP_20191CModel.FK_RespuestaAlumno_Alumno">
+            <End Role="Alumno" EntitySet="Alumno" />
+            <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pregunta_Clase" Association="TP_20191CModel.FK_Pregunta_Clase">
+            <End Role="Clase" EntitySet="Clase" />
+            <End Role="Pregunta" EntitySet="Pregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pregunta_Profesor" Association="TP_20191CModel.FK_Pregunta_Profesor">
+            <End Role="Profesor" EntitySet="Profesor" />
+            <End Role="Pregunta" EntitySet="Pregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pregunta_Profesor1" Association="TP_20191CModel.FK_Pregunta_Profesor1">
+            <End Role="Profesor" EntitySet="Profesor" />
+            <End Role="Pregunta" EntitySet="Pregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pregunta_Tema" Association="TP_20191CModel.FK_Pregunta_Tema">
+            <End Role="Tema" EntitySet="Tema" />
+            <End Role="Pregunta" EntitySet="Pregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RespuestaAlumno_Pregunta" Association="TP_20191CModel.FK_RespuestaAlumno_Pregunta">
+            <End Role="Pregunta" EntitySet="Pregunta" />
+            <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RespuestaAlumno_Profesor" Association="TP_20191CModel.FK_RespuestaAlumno_Profesor">
+            <End Role="Profesor" EntitySet="Profesor" />
+            <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RespuestaAlumno_ResultadoEvaluacion" Association="TP_20191CModel.FK_RespuestaAlumno_ResultadoEvaluacion">
+            <End Role="ResultadoEvaluacion" EntitySet="ResultadoEvaluacion" />
+            <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="Alumno">
           <Key>
             <PropertyRef Name="IdAlumno" />
           </Key>
           <Property Name="IdAlumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Email" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Nombre" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Apellido" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Apellido" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
           <Property Name="Habilitado" Type="Boolean" Nullable="false" />
           <Property Name="PuntosTotales" Type="Int64" Nullable="false" />
           <Property Name="CantidadRespuestasCorrectas" Type="Int32" Nullable="false" />
@@ -247,16 +287,16 @@
           <Property Name="CantidadRespuestasMal" Type="Int32" Nullable="false" />
           <Property Name="CantidadMejorRespuesta" Type="Int32" Nullable="false" />
           <Property Name="FechaHoraCreacion" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="RespuestaAlumno" Relationship="Self.FK_RespuestaAlumno_Alumno" FromRole="Alumno" ToRole="RespuestaAlumno" />
+          <NavigationProperty Name="RespuestaAlumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_Alumno" FromRole="Alumno" ToRole="RespuestaAlumno" />
         </EntityType>
         <EntityType Name="Clase">
           <Key>
             <PropertyRef Name="IdClase" />
           </Key>
           <Property Name="IdClase" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Pregunta" Relationship="Self.FK_Pregunta_Clase" FromRole="Clase" ToRole="Pregunta" />
+          <NavigationProperty Name="Pregunta" Relationship="TP_20191CModel.FK_Pregunta_Clase" FromRole="Clase" ToRole="Pregunta" />
         </EntityType>
         <EntityType Name="Pregunta">
           <Key>
@@ -268,31 +308,31 @@
           <Property Name="IdTema" Type="Int32" Nullable="false" />
           <Property Name="FechaDisponibleDesde" Type="DateTime" Precision="3" />
           <Property Name="FechaDisponibleHasta" Type="DateTime" Precision="3" />
-          <Property Name="Pregunta1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pregunta1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="IdProfesorCreacion" Type="Int32" Nullable="false" />
           <Property Name="FechaHoraCreacion" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="IdProfesorModificacion" Type="Int32" />
           <Property Name="FechaHoraModificacion" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Clase" Relationship="Self.FK_Pregunta_Clase" FromRole="Pregunta" ToRole="Clase" />
-          <NavigationProperty Name="Profesor" Relationship="Self.FK_Pregunta_Profesor" FromRole="Pregunta" ToRole="Profesor" />
-          <NavigationProperty Name="Profesor1" Relationship="Self.FK_Pregunta_Profesor1" FromRole="Pregunta" ToRole="Profesor" />
-          <NavigationProperty Name="Tema" Relationship="Self.FK_Pregunta_Tema" FromRole="Pregunta" ToRole="Tema" />
-          <NavigationProperty Name="RespuestaAlumno" Relationship="Self.FK_RespuestaAlumno_Pregunta" FromRole="Pregunta" ToRole="RespuestaAlumno" />
+          <NavigationProperty Name="Clase" Relationship="TP_20191CModel.FK_Pregunta_Clase" FromRole="Pregunta" ToRole="Clase" />
+          <NavigationProperty Name="Profesor" Relationship="TP_20191CModel.FK_Pregunta_Profesor" FromRole="Pregunta" ToRole="Profesor" />
+          <NavigationProperty Name="Profesor1" Relationship="TP_20191CModel.FK_Pregunta_Profesor1" FromRole="Pregunta" ToRole="Profesor" />
+          <NavigationProperty Name="Tema" Relationship="TP_20191CModel.FK_Pregunta_Tema" FromRole="Pregunta" ToRole="Tema" />
+          <NavigationProperty Name="RespuestaAlumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_Pregunta" FromRole="Pregunta" ToRole="RespuestaAlumno" />
         </EntityType>
         <EntityType Name="Profesor">
           <Key>
             <PropertyRef Name="IdProfesor" />
           </Key>
           <Property Name="IdProfesor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Email" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Nombre" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Apellido" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Apellido" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
           <Property Name="Habilitado" Type="Boolean" Nullable="false" />
           <Property Name="FechaHoraCreacion" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Pregunta" Relationship="Self.FK_Pregunta_Profesor" FromRole="Profesor" ToRole="Pregunta" />
-          <NavigationProperty Name="Pregunta1" Relationship="Self.FK_Pregunta_Profesor1" FromRole="Profesor" ToRole="Pregunta" />
-          <NavigationProperty Name="RespuestaAlumno" Relationship="Self.FK_RespuestaAlumno_Profesor" FromRole="Profesor" ToRole="RespuestaAlumno" />
+          <NavigationProperty Name="Pregunta" Relationship="TP_20191CModel.FK_Pregunta_Profesor" FromRole="Profesor" ToRole="Pregunta" />
+          <NavigationProperty Name="Pregunta1" Relationship="TP_20191CModel.FK_Pregunta_Profesor1" FromRole="Profesor" ToRole="Pregunta" />
+          <NavigationProperty Name="RespuestaAlumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_Profesor" FromRole="Profesor" ToRole="RespuestaAlumno" />
         </EntityType>
         <EntityType Name="RespuestaAlumno">
           <Key>
@@ -302,7 +342,7 @@
           <Property Name="IdPregunta" Type="Int32" Nullable="false" />
           <Property Name="IdAlumno" Type="Int32" Nullable="false" />
           <Property Name="FechaHoraRespuesta" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Respuesta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Respuesta" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Orden" Type="Int32" Nullable="false" />
           <Property Name="IdProfesorEvaluador" Type="Int32" />
           <Property Name="FechaHoraEvaluacion" Type="DateTime" Precision="3" />
@@ -310,30 +350,30 @@
           <Property Name="RespuestasCorrectasHastaElMomento" Type="Int32" />
           <Property Name="Puntos" Type="Int64" />
           <Property Name="MejorRespuesta" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Alumno" Relationship="Self.FK_RespuestaAlumno_Alumno" FromRole="RespuestaAlumno" ToRole="Alumno" />
-          <NavigationProperty Name="Pregunta" Relationship="Self.FK_RespuestaAlumno_Pregunta" FromRole="RespuestaAlumno" ToRole="Pregunta" />
-          <NavigationProperty Name="Profesor" Relationship="Self.FK_RespuestaAlumno_Profesor" FromRole="RespuestaAlumno" ToRole="Profesor" />
-          <NavigationProperty Name="ResultadoEvaluacion" Relationship="Self.FK_RespuestaAlumno_ResultadoEvaluacion" FromRole="RespuestaAlumno" ToRole="ResultadoEvaluacion" />
+          <NavigationProperty Name="Alumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_Alumno" FromRole="RespuestaAlumno" ToRole="Alumno" />
+          <NavigationProperty Name="Pregunta" Relationship="TP_20191CModel.FK_RespuestaAlumno_Pregunta" FromRole="RespuestaAlumno" ToRole="Pregunta" />
+          <NavigationProperty Name="Profesor" Relationship="TP_20191CModel.FK_RespuestaAlumno_Profesor" FromRole="RespuestaAlumno" ToRole="Profesor" />
+          <NavigationProperty Name="ResultadoEvaluacion" Relationship="TP_20191CModel.FK_RespuestaAlumno_ResultadoEvaluacion" FromRole="RespuestaAlumno" ToRole="ResultadoEvaluacion" />
         </EntityType>
         <EntityType Name="ResultadoEvaluacion">
           <Key>
             <PropertyRef Name="IdResultadoEvaluacion" />
           </Key>
           <Property Name="IdResultadoEvaluacion" Type="Int32" Nullable="false" />
-          <Property Name="Resultado" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="RespuestaAlumno" Relationship="Self.FK_RespuestaAlumno_ResultadoEvaluacion" FromRole="ResultadoEvaluacion" ToRole="RespuestaAlumno" />
+          <Property Name="Resultado" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RespuestaAlumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_ResultadoEvaluacion" FromRole="ResultadoEvaluacion" ToRole="RespuestaAlumno" />
         </EntityType>
         <EntityType Name="Tema">
           <Key>
             <PropertyRef Name="IdTema" />
           </Key>
           <Property Name="IdTema" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Pregunta" Relationship="Self.FK_Pregunta_Tema" FromRole="Tema" ToRole="Pregunta" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Pregunta" Relationship="TP_20191CModel.FK_Pregunta_Tema" FromRole="Tema" ToRole="Pregunta" />
         </EntityType>
         <Association Name="FK_RespuestaAlumno_Alumno">
-          <End Role="Alumno" Type="Self.Alumno" Multiplicity="1" />
-          <End Role="RespuestaAlumno" Type="Self.RespuestaAlumno" Multiplicity="*" />
+          <End Type="TP_20191CModel.Alumno" Role="Alumno" Multiplicity="1" />
+          <End Type="TP_20191CModel.RespuestaAlumno" Role="RespuestaAlumno" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Alumno">
               <PropertyRef Name="IdAlumno" />
@@ -344,8 +384,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Pregunta_Clase">
-          <End Role="Clase" Type="Self.Clase" Multiplicity="1" />
-          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="*" />
+          <End Type="TP_20191CModel.Clase" Role="Clase" Multiplicity="1" />
+          <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clase">
               <PropertyRef Name="IdClase" />
@@ -356,8 +396,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Pregunta_Profesor">
-          <End Role="Profesor" Type="Self.Profesor" Multiplicity="1" />
-          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="*" />
+          <End Type="TP_20191CModel.Profesor" Role="Profesor" Multiplicity="1" />
+          <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Profesor">
               <PropertyRef Name="IdProfesor" />
@@ -368,8 +408,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Pregunta_Profesor1">
-          <End Role="Profesor" Type="Self.Profesor" Multiplicity="0..1" />
-          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="*" />
+          <End Type="TP_20191CModel.Profesor" Role="Profesor" Multiplicity="0..1" />
+          <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Profesor">
               <PropertyRef Name="IdProfesor" />
@@ -380,8 +420,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Pregunta_Tema">
-          <End Role="Tema" Type="Self.Tema" Multiplicity="1" />
-          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="*" />
+          <End Type="TP_20191CModel.Tema" Role="Tema" Multiplicity="1" />
+          <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tema">
               <PropertyRef Name="IdTema" />
@@ -392,8 +432,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RespuestaAlumno_Pregunta">
-          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="1" />
-          <End Role="RespuestaAlumno" Type="Self.RespuestaAlumno" Multiplicity="*" />
+          <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+          <End Type="TP_20191CModel.RespuestaAlumno" Role="RespuestaAlumno" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Pregunta">
               <PropertyRef Name="IdPregunta" />
@@ -404,8 +444,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RespuestaAlumno_Profesor">
-          <End Role="Profesor" Type="Self.Profesor" Multiplicity="0..1" />
-          <End Role="RespuestaAlumno" Type="Self.RespuestaAlumno" Multiplicity="*" />
+          <End Type="TP_20191CModel.Profesor" Role="Profesor" Multiplicity="0..1" />
+          <End Type="TP_20191CModel.RespuestaAlumno" Role="RespuestaAlumno" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Profesor">
               <PropertyRef Name="IdProfesor" />
@@ -416,8 +456,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RespuestaAlumno_ResultadoEvaluacion">
-          <End Role="ResultadoEvaluacion" Type="Self.ResultadoEvaluacion" Multiplicity="0..1" />
-          <End Role="RespuestaAlumno" Type="Self.RespuestaAlumno" Multiplicity="*" />
+          <End Type="TP_20191CModel.ResultadoEvaluacion" Role="ResultadoEvaluacion" Multiplicity="0..1" />
+          <End Type="TP_20191CModel.RespuestaAlumno" Role="RespuestaAlumno" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ResultadoEvaluacion">
               <PropertyRef Name="IdResultadoEvaluacion" />
@@ -427,48 +467,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TP_20191CEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Alumno" EntityType="Self.Alumno" />
-          <EntitySet Name="Clase" EntityType="Self.Clase" />
-          <EntitySet Name="Pregunta" EntityType="Self.Pregunta" />
-          <EntitySet Name="Profesor" EntityType="Self.Profesor" />
-          <EntitySet Name="RespuestaAlumno" EntityType="Self.RespuestaAlumno" />
-          <EntitySet Name="ResultadoEvaluacion" EntityType="Self.ResultadoEvaluacion" />
-          <EntitySet Name="Tema" EntityType="Self.Tema" />
-          <AssociationSet Name="FK_RespuestaAlumno_Alumno" Association="Self.FK_RespuestaAlumno_Alumno">
-            <End Role="Alumno" EntitySet="Alumno" />
-            <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pregunta_Clase" Association="Self.FK_Pregunta_Clase">
-            <End Role="Clase" EntitySet="Clase" />
-            <End Role="Pregunta" EntitySet="Pregunta" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pregunta_Profesor" Association="Self.FK_Pregunta_Profesor">
-            <End Role="Profesor" EntitySet="Profesor" />
-            <End Role="Pregunta" EntitySet="Pregunta" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pregunta_Profesor1" Association="Self.FK_Pregunta_Profesor1">
-            <End Role="Profesor" EntitySet="Profesor" />
-            <End Role="Pregunta" EntitySet="Pregunta" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pregunta_Tema" Association="Self.FK_Pregunta_Tema">
-            <End Role="Tema" EntitySet="Tema" />
-            <End Role="Pregunta" EntitySet="Pregunta" />
-          </AssociationSet>
-          <AssociationSet Name="FK_RespuestaAlumno_Pregunta" Association="Self.FK_RespuestaAlumno_Pregunta">
-            <End Role="Pregunta" EntitySet="Pregunta" />
-            <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
-          </AssociationSet>
-          <AssociationSet Name="FK_RespuestaAlumno_Profesor" Association="Self.FK_RespuestaAlumno_Profesor">
-            <End Role="Profesor" EntitySet="Profesor" />
-            <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
-          </AssociationSet>
-          <AssociationSet Name="FK_RespuestaAlumno_ResultadoEvaluacion" Association="Self.FK_RespuestaAlumno_ResultadoEvaluacion">
-            <End Role="ResultadoEvaluacion" EntitySet="ResultadoEvaluacion" />
-            <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -477,91 +476,91 @@
           <EntitySetMapping Name="Alumno">
             <EntityTypeMapping TypeName="TP_20191CModel.Alumno">
               <MappingFragment StoreEntitySet="Alumno">
-                <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-                <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
-                <ScalarProperty Name="PuntosTotales" ColumnName="PuntosTotales" />
-                <ScalarProperty Name="CantidadRespuestasCorrectas" ColumnName="CantidadRespuestasCorrectas" />
-                <ScalarProperty Name="CantidadRespuestasRegular" ColumnName="CantidadRespuestasRegular" />
-                <ScalarProperty Name="CantidadRespuestasMal" ColumnName="CantidadRespuestasMal" />
-                <ScalarProperty Name="CantidadMejorRespuesta" ColumnName="CantidadMejorRespuesta" />
                 <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
+                <ScalarProperty Name="CantidadMejorRespuesta" ColumnName="CantidadMejorRespuesta" />
+                <ScalarProperty Name="CantidadRespuestasMal" ColumnName="CantidadRespuestasMal" />
+                <ScalarProperty Name="CantidadRespuestasRegular" ColumnName="CantidadRespuestasRegular" />
+                <ScalarProperty Name="CantidadRespuestasCorrectas" ColumnName="CantidadRespuestasCorrectas" />
+                <ScalarProperty Name="PuntosTotales" ColumnName="PuntosTotales" />
+                <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Clase">
             <EntityTypeMapping TypeName="TP_20191CModel.Clase">
               <MappingFragment StoreEntitySet="Clase">
-                <ScalarProperty Name="IdClase" ColumnName="IdClase" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdClase" ColumnName="IdClase" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pregunta">
             <EntityTypeMapping TypeName="TP_20191CModel.Pregunta">
               <MappingFragment StoreEntitySet="Pregunta">
-                <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
-                <ScalarProperty Name="Nro" ColumnName="Nro" />
-                <ScalarProperty Name="IdClase" ColumnName="IdClase" />
-                <ScalarProperty Name="IdTema" ColumnName="IdTema" />
-                <ScalarProperty Name="FechaDisponibleDesde" ColumnName="FechaDisponibleDesde" />
-                <ScalarProperty Name="FechaDisponibleHasta" ColumnName="FechaDisponibleHasta" />
-                <ScalarProperty Name="Pregunta1" ColumnName="Pregunta" />
-                <ScalarProperty Name="IdProfesorCreacion" ColumnName="IdProfesorCreacion" />
-                <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
-                <ScalarProperty Name="IdProfesorModificacion" ColumnName="IdProfesorModificacion" />
                 <ScalarProperty Name="FechaHoraModificacion" ColumnName="FechaHoraModificacion" />
+                <ScalarProperty Name="IdProfesorModificacion" ColumnName="IdProfesorModificacion" />
+                <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
+                <ScalarProperty Name="IdProfesorCreacion" ColumnName="IdProfesorCreacion" />
+                <ScalarProperty Name="Pregunta1" ColumnName="Pregunta" />
+                <ScalarProperty Name="FechaDisponibleHasta" ColumnName="FechaDisponibleHasta" />
+                <ScalarProperty Name="FechaDisponibleDesde" ColumnName="FechaDisponibleDesde" />
+                <ScalarProperty Name="IdTema" ColumnName="IdTema" />
+                <ScalarProperty Name="IdClase" ColumnName="IdClase" />
+                <ScalarProperty Name="Nro" ColumnName="Nro" />
+                <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Profesor">
             <EntityTypeMapping TypeName="TP_20191CModel.Profesor">
               <MappingFragment StoreEntitySet="Profesor">
-                <ScalarProperty Name="IdProfesor" ColumnName="IdProfesor" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-                <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
                 <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
+                <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="IdProfesor" ColumnName="IdProfesor" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="RespuestaAlumno">
             <EntityTypeMapping TypeName="TP_20191CModel.RespuestaAlumno">
               <MappingFragment StoreEntitySet="RespuestaAlumno">
-                <ScalarProperty Name="IdRespuestaAlumno" ColumnName="IdRespuestaAlumno" />
-                <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
-                <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
-                <ScalarProperty Name="FechaHoraRespuesta" ColumnName="FechaHoraRespuesta" />
-                <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
-                <ScalarProperty Name="Orden" ColumnName="Orden" />
-                <ScalarProperty Name="IdProfesorEvaluador" ColumnName="IdProfesorEvaluador" />
-                <ScalarProperty Name="FechaHoraEvaluacion" ColumnName="FechaHoraEvaluacion" />
-                <ScalarProperty Name="IdResultadoEvaluacion" ColumnName="IdResultadoEvaluacion" />
-                <ScalarProperty Name="RespuestasCorrectasHastaElMomento" ColumnName="RespuestasCorrectasHastaElMomento" />
-                <ScalarProperty Name="Puntos" ColumnName="Puntos" />
                 <ScalarProperty Name="MejorRespuesta" ColumnName="MejorRespuesta" />
+                <ScalarProperty Name="Puntos" ColumnName="Puntos" />
+                <ScalarProperty Name="RespuestasCorrectasHastaElMomento" ColumnName="RespuestasCorrectasHastaElMomento" />
+                <ScalarProperty Name="IdResultadoEvaluacion" ColumnName="IdResultadoEvaluacion" />
+                <ScalarProperty Name="FechaHoraEvaluacion" ColumnName="FechaHoraEvaluacion" />
+                <ScalarProperty Name="IdProfesorEvaluador" ColumnName="IdProfesorEvaluador" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+                <ScalarProperty Name="FechaHoraRespuesta" ColumnName="FechaHoraRespuesta" />
+                <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
+                <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+                <ScalarProperty Name="IdRespuestaAlumno" ColumnName="IdRespuestaAlumno" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ResultadoEvaluacion">
             <EntityTypeMapping TypeName="TP_20191CModel.ResultadoEvaluacion">
               <MappingFragment StoreEntitySet="ResultadoEvaluacion">
-                <ScalarProperty Name="IdResultadoEvaluacion" ColumnName="IdResultadoEvaluacion" />
                 <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="IdResultadoEvaluacion" ColumnName="IdResultadoEvaluacion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tema">
             <EntityTypeMapping TypeName="TP_20191CModel.Tema">
               <MappingFragment StoreEntitySet="Tema">
-                <ScalarProperty Name="IdTema" ColumnName="IdTema" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdTema" ColumnName="IdTema" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
