@@ -1,0 +1,159 @@
+﻿
+@{
+    ViewBag.Title = "Evaluar";
+    Layout = "~/Views/Shared/ProfesoresLayout.cshtml";
+}
+
+<div class="evaluar-repuesta">
+    <section class="titulo-pagina">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Repuestas</h2>
+            </div>
+        </div>
+    </section>
+    <section id="clase-pregunta">
+        <div class="row">
+            <div class="col-sm-12">
+                <h6 class="ml-4"><strong>@ViewBag.Pregunta.Clase.Nombre - @ViewBag.Pregunta.Tema.Nombre</strong></h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h5><strong>@ViewBag.Pregunta.Nro @ViewBag.Pregunta.Pregunta1</strong></h5>
+                 </div>
+     <div class="col-sm-6">
+                <span>(@ViewBag.Pregunta.FechaDisponibleDesde.ToShortDateString() - @ViewBag.Pregunta.FechaDisponibleHasta.ToShortDateString())</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="nav">
+                    <li class="nav-item">
+                        @Html.ActionLink("Todas", "EvaluarRespuesta", "Profesor",
+                            new { idPregunta = ViewBag.Pregunta.IdPregunta, filtro = -1 }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Sin Corregir", "EvaluarRespuesta", "Profesor",
+                            new { idPregunta = ViewBag.Pregunta.IdPregunta, filtro = 0 }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Correctas", "EvaluarRespuesta", "Profesor",
+                            new { idPregunta = ViewBag.Pregunta.IdPregunta, filtro = 1 }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Regular", "EvaluarRespuesta", "Profesor",
+                            new { idPregunta = ViewBag.Pregunta.IdPregunta, filtro = 2 }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Mal", "EvaluarRespuesta", "Profesor",
+                            new { idPregunta = ViewBag.Pregunta.IdPregunta, filtro = 3 }, new { @class = "nav-link" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="repuestas-preguntas">
+        @{bool primerRespuestaSinCorregir = true; }
+        @foreach (var item in @ViewBag.Respuestas)
+        {
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="fecha-repuesta d-inline-block">
+                        <strong>@item.FechaHoraRespuesta</strong>
+                    </div>
+                    <div class="nombre-alumno d-inline-block">
+                        <strong>@item.Alumno.Nombre @item.Alumno.Apellido</strong>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <p>
+                        @item.Respuesta
+                    </p>
+                </div>
+
+                @if (ViewBag.TodasCorregidas && item.IdResultadoEvaluacion == 1 && ViewBag.MejorRespuesta == false)
+                {
+                    <div class="col-sm-2">
+                        <span class="text-success">Correcta</span>
+                    </div>
+                    <div class="col-sm-3">
+                        @Html.ActionLink("Marcar como mejor respuesta", "MarcarComoMejorRespuesta", "Evaluar",
+                                            new { idPregunta = item.IdPregunta, idRespuesta = item.IdRespuestaAlumno },
+                                            new { @class= "nav-link text-info" })
+                    </div>
+                }
+                else
+                {
+                    int resultado = 0;
+                    if (item.IdResultadoEvaluacion != null) { resultado = item.IdResultadoEvaluacion; }
+
+                    switch (resultado)
+                    {
+                    case 1:
+                        <div class="col-sm-5">
+                            @if (@item.MejorRespuesta)
+                            {
+                                <p class="text-success">Mejor Respuesta</p>
+                            }
+                            else
+                            {
+                                <p class="text-success">Correcta</p>
+                            }
+                        </div>
+                        break;
+                    case 2:
+                        <div class="col-sm-5">
+                            <p class="text-warning">Regular</p>
+                        </div>
+                        break;
+                    case 3:
+                        <div class="col-sm-5">
+                            <p class="text-danger">Mal</p>
+                        </div>
+                        break;
+                    default:
+
+                        if (primerRespuestaSinCorregir)
+                        {
+                            primerRespuestaSinCorregir = false;
+                            <div class="col-sm-5">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        @Html.ActionLink("Correcta", "EvaluarRespuesta", "Evaluar",
+                                           new { idPregunta = item.IdPregunta, idRespuesta = item.IdRespuestaAlumno,
+                                               idResultadoEvaluacion = 1 },
+                                           new { @class= "nav-link text-success" })
+                                    </li>
+                                    <li class="nav-item">
+                                        @Html.ActionLink("Regular", "EvaluarRespuesta", "Evaluar",
+                                           new { idPregunta = item.IdPregunta, idRespuesta = item.IdRespuestaAlumno,
+                                               idResultadoEvaluacion = 2 },
+                                           new { @class= "nav-link text-warning" })
+                                    </li>
+                                    <li class="nav-item">
+                                        @Html.ActionLink("Mal", "EvaluarRespuesta", "Evaluar",
+                                           new { idPregunta = item.IdPregunta, idRespuesta = item.IdRespuestaAlumno,
+                                               idResultadoEvaluacion = 3 },
+                                           new { @class= "nav-link text-danger" })
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-sm-5">
+                            </div>
+
+                        }
+
+                    break;
+
+                    }
+                }
+            </div>
+        }
+    </section>
+</div>
+
+ 

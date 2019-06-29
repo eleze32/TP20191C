@@ -149,7 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AlumnosController.cs" />
-    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\EvaluarController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Global.asax.cs">
@@ -284,7 +284,7 @@
     <Content Include="Content\webfonts\fa-solid-900.woff" />
     <Content Include="Content\webfonts\fa-solid-900.woff2" />
     <Content Include="Views\Profesor\ModificarPregunta.cshtml" />
-    <Content Include="Views\Profesor\EvaluarRepuesta.cshtml" />
+    <Content Include="Views\Profesor\EvaluarRespuesta.cshtml" />
     <Content Include="Views\Alumnos\VerPreguntas.cshtml" />
     <Content Include="Views\Alumnos\ResponderPregunta.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_jquery_full.cshtml" />
@@ -296,6 +296,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Evaluar\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Servicios;
 
 namespace TP20191C.Controllers
 {
@@ -20,6 +21,7 @@ namespace TP20191C.Controllers
         //Profesor ve todas las preguntas hechas por él
         public ActionResult AdministrarPreguntas()
         {
+            ViewBag.Preguntas = PreguntasServicio.ObtenerPreguntas();
             return View();
         }
 
@@ -35,9 +37,30 @@ namespace TP20191C.Controllers
             return View();
         }
 
-        // profesor evalaua las repuestas, listados de repuestas de alumnos
-        public ActionResult EvaluarRepuestas()
+        // profesor evalua las repuestas, listados de repuestas de alumnos
+        public ActionResult EvaluarRespuesta()
         {
+            int idPregunta = Convert.ToInt32(Request.QueryString["idPregunta"]);
+            int filtro = Convert.ToInt32(Request.QueryString["filtro"]);
+
+            //filtro = -1 todas, 0 sin corregir, 1 correcta, 2 regular, 3 mal
+            switch (filtro)
+            {
+                case 0:
+                    ViewBag.Respuestas = RespuestasServicio.ObtenerRespuestasSinCorregirAPregunta(idPregunta);
+                    break;
+                case 1:
+                case 2:
+                case 3:
+                    ViewBag.Respuestas = RespuestasServicio.ObtenerRespuestasCorregidasDePregunta(idPregunta, filtro);
+                    break;
+                default:
+                    ViewBag.Respuestas = RespuestasServicio.ObtenerRespuestasAPregunta(idPregunta);
+                    break;
+            }
+            ViewBag.Pregunta = PreguntasServicio.ObtenerInformacionDePregunta(idPregunta);
+            ViewBag.TodasCorregidas = RespuestasServicio.VerificarSiTodasLasRespuestasEstanCorregidas(idPregunta);
+            ViewBag.MejorRespuesta = RespuestasServicio.VerificarSiExisteMejorRespuesta(idPregunta);
             return View();
         }
     }
