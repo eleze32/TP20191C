@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TP_20191CModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TP_20191CEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumno" EntityType="TP_20191CModel.Alumno" />
+    <EntitySet Name="Clase" EntityType="TP_20191CModel.Clase" />
+    <EntitySet Name="Pregunta" EntityType="TP_20191CModel.Pregunta" />
+    <EntitySet Name="Profesor" EntityType="TP_20191CModel.Profesor" />
+    <EntitySet Name="RespuestaAlumno" EntityType="TP_20191CModel.RespuestaAlumno" />
+    <EntitySet Name="ResultadoEvaluacion" EntityType="TP_20191CModel.ResultadoEvaluacion" />
+    <EntitySet Name="Tema" EntityType="TP_20191CModel.Tema" />
+    <AssociationSet Name="FK_RespuestaAlumno_Alumno" Association="TP_20191CModel.FK_RespuestaAlumno_Alumno">
+      <End Role="Alumno" EntitySet="Alumno" />
+      <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pregunta_Clase" Association="TP_20191CModel.FK_Pregunta_Clase">
+      <End Role="Clase" EntitySet="Clase" />
+      <End Role="Pregunta" EntitySet="Pregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pregunta_Profesor" Association="TP_20191CModel.FK_Pregunta_Profesor">
+      <End Role="Profesor" EntitySet="Profesor" />
+      <End Role="Pregunta" EntitySet="Pregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pregunta_Profesor1" Association="TP_20191CModel.FK_Pregunta_Profesor1">
+      <End Role="Profesor" EntitySet="Profesor" />
+      <End Role="Pregunta" EntitySet="Pregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pregunta_Tema" Association="TP_20191CModel.FK_Pregunta_Tema">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="Pregunta" EntitySet="Pregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RespuestaAlumno_Pregunta" Association="TP_20191CModel.FK_RespuestaAlumno_Pregunta">
+      <End Role="Pregunta" EntitySet="Pregunta" />
+      <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RespuestaAlumno_Profesor" Association="TP_20191CModel.FK_RespuestaAlumno_Profesor">
+      <End Role="Profesor" EntitySet="Profesor" />
+      <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RespuestaAlumno_ResultadoEvaluacion" Association="TP_20191CModel.FK_RespuestaAlumno_ResultadoEvaluacion">
+      <End Role="ResultadoEvaluacion" EntitySet="ResultadoEvaluacion" />
+      <End Role="RespuestaAlumno" EntitySet="RespuestaAlumno" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="IdAlumno" />
+    </Key>
+    <Property Name="IdAlumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Apellido" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Habilitado" Type="Boolean" Nullable="false" />
+    <Property Name="PuntosTotales" Type="Int64" Nullable="false" />
+    <Property Name="CantidadRespuestasCorrectas" Type="Int32" Nullable="false" />
+    <Property Name="CantidadRespuestasRegular" Type="Int32" Nullable="false" />
+    <Property Name="CantidadRespuestasMal" Type="Int32" Nullable="false" />
+    <Property Name="CantidadMejorRespuesta" Type="Int32" Nullable="false" />
+    <Property Name="FechaHoraCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="RespuestaAlumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_Alumno" FromRole="Alumno" ToRole="RespuestaAlumno" />
+  </EntityType>
+  <EntityType Name="Clase">
+    <Key>
+      <PropertyRef Name="IdClase" />
+    </Key>
+    <Property Name="IdClase" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Pregunta" Relationship="TP_20191CModel.FK_Pregunta_Clase" FromRole="Clase" ToRole="Pregunta" />
+  </EntityType>
+  <EntityType Name="Pregunta">
+    <Key>
+      <PropertyRef Name="IdPregunta" />
+    </Key>
+    <Property Name="IdPregunta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nro" Type="Int32" Nullable="false" />
+    <Property Name="IdClase" Type="Int32" Nullable="false" />
+    <Property Name="IdTema" Type="Int32" Nullable="false" />
+    <Property Name="FechaDisponibleDesde" Type="DateTime" Precision="3" />
+    <Property Name="FechaDisponibleHasta" Type="DateTime" Precision="3" />
+    <Property Name="Pregunta1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IdProfesorCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaHoraCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdProfesorModificacion" Type="Int32" />
+    <Property Name="FechaHoraModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Clase" Relationship="TP_20191CModel.FK_Pregunta_Clase" FromRole="Pregunta" ToRole="Clase" />
+    <NavigationProperty Name="Profesor" Relationship="TP_20191CModel.FK_Pregunta_Profesor" FromRole="Pregunta" ToRole="Profesor" />
+    <NavigationProperty Name="Profesor1" Relationship="TP_20191CModel.FK_Pregunta_Profesor1" FromRole="Pregunta" ToRole="Profesor" />
+    <NavigationProperty Name="Tema" Relationship="TP_20191CModel.FK_Pregunta_Tema" FromRole="Pregunta" ToRole="Tema" />
+    <NavigationProperty Name="RespuestaAlumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_Pregunta" FromRole="Pregunta" ToRole="RespuestaAlumno" />
+  </EntityType>
+  <EntityType Name="Profesor">
+    <Key>
+      <PropertyRef Name="IdProfesor" />
+    </Key>
+    <Property Name="IdProfesor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Apellido" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Habilitado" Type="Boolean" Nullable="false" />
+    <Property Name="FechaHoraCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Pregunta" Relationship="TP_20191CModel.FK_Pregunta_Profesor" FromRole="Profesor" ToRole="Pregunta" />
+    <NavigationProperty Name="Pregunta1" Relationship="TP_20191CModel.FK_Pregunta_Profesor1" FromRole="Profesor" ToRole="Pregunta" />
+    <NavigationProperty Name="RespuestaAlumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_Profesor" FromRole="Profesor" ToRole="RespuestaAlumno" />
+  </EntityType>
+  <EntityType Name="RespuestaAlumno">
+    <Key>
+      <PropertyRef Name="IdRespuestaAlumno" />
+    </Key>
+    <Property Name="IdRespuestaAlumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPregunta" Type="Int32" Nullable="false" />
+    <Property Name="IdAlumno" Type="Int32" Nullable="false" />
+    <Property Name="FechaHoraRespuesta" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Respuesta" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Orden" Type="Int32" Nullable="false" />
+    <Property Name="IdProfesorEvaluador" Type="Int32" />
+    <Property Name="FechaHoraEvaluacion" Type="DateTime" Precision="3" />
+    <Property Name="IdResultadoEvaluacion" Type="Int32" />
+    <Property Name="RespuestasCorrectasHastaElMomento" Type="Int32" />
+    <Property Name="Puntos" Type="Int64" />
+    <Property Name="MejorRespuesta" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Alumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_Alumno" FromRole="RespuestaAlumno" ToRole="Alumno" />
+    <NavigationProperty Name="Pregunta" Relationship="TP_20191CModel.FK_RespuestaAlumno_Pregunta" FromRole="RespuestaAlumno" ToRole="Pregunta" />
+    <NavigationProperty Name="Profesor" Relationship="TP_20191CModel.FK_RespuestaAlumno_Profesor" FromRole="RespuestaAlumno" ToRole="Profesor" />
+    <NavigationProperty Name="ResultadoEvaluacion" Relationship="TP_20191CModel.FK_RespuestaAlumno_ResultadoEvaluacion" FromRole="RespuestaAlumno" ToRole="ResultadoEvaluacion" />
+  </EntityType>
+  <EntityType Name="ResultadoEvaluacion">
+    <Key>
+      <PropertyRef Name="IdResultadoEvaluacion" />
+    </Key>
+    <Property Name="IdResultadoEvaluacion" Type="Int32" Nullable="false" />
+    <Property Name="Resultado" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="RespuestaAlumno" Relationship="TP_20191CModel.FK_RespuestaAlumno_ResultadoEvaluacion" FromRole="ResultadoEvaluacion" ToRole="RespuestaAlumno" />
+  </EntityType>
+  <EntityType Name="Tema">
+    <Key>
+      <PropertyRef Name="IdTema" />
+    </Key>
+    <Property Name="IdTema" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Pregunta" Relationship="TP_20191CModel.FK_Pregunta_Tema" FromRole="Tema" ToRole="Pregunta" />
+  </EntityType>
+  <Association Name="FK_RespuestaAlumno_Alumno">
+    <End Type="TP_20191CModel.Alumno" Role="Alumno" Multiplicity="1" />
+    <End Type="TP_20191CModel.RespuestaAlumno" Role="RespuestaAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="RespuestaAlumno">
+        <PropertyRef Name="IdAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pregunta_Clase">
+    <End Type="TP_20191CModel.Clase" Role="Clase" Multiplicity="1" />
+    <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clase">
+        <PropertyRef Name="IdClase" />
+      </Principal>
+      <Dependent Role="Pregunta">
+        <PropertyRef Name="IdClase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pregunta_Profesor">
+    <End Type="TP_20191CModel.Profesor" Role="Profesor" Multiplicity="1" />
+    <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesor">
+        <PropertyRef Name="IdProfesor" />
+      </Principal>
+      <Dependent Role="Pregunta">
+        <PropertyRef Name="IdProfesorCreacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pregunta_Profesor1">
+    <End Type="TP_20191CModel.Profesor" Role="Profesor" Multiplicity="0..1" />
+    <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesor">
+        <PropertyRef Name="IdProfesor" />
+      </Principal>
+      <Dependent Role="Pregunta">
+        <PropertyRef Name="IdProfesorModificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pregunta_Tema">
+    <End Type="TP_20191CModel.Tema" Role="Tema" Multiplicity="1" />
+    <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="Pregunta">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RespuestaAlumno_Pregunta">
+    <End Type="TP_20191CModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+    <End Type="TP_20191CModel.RespuestaAlumno" Role="RespuestaAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pregunta">
+        <PropertyRef Name="IdPregunta" />
+      </Principal>
+      <Dependent Role="RespuestaAlumno">
+        <PropertyRef Name="IdPregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RespuestaAlumno_Profesor">
+    <End Type="TP_20191CModel.Profesor" Role="Profesor" Multiplicity="0..1" />
+    <End Type="TP_20191CModel.RespuestaAlumno" Role="RespuestaAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesor">
+        <PropertyRef Name="IdProfesor" />
+      </Principal>
+      <Dependent Role="RespuestaAlumno">
+        <PropertyRef Name="IdProfesorEvaluador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RespuestaAlumno_ResultadoEvaluacion">
+    <End Type="TP_20191CModel.ResultadoEvaluacion" Role="ResultadoEvaluacion" Multiplicity="0..1" />
+    <End Type="TP_20191CModel.RespuestaAlumno" Role="RespuestaAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResultadoEvaluacion">
+        <PropertyRef Name="IdResultadoEvaluacion" />
+      </Principal>
+      <Dependent Role="RespuestaAlumno">
+        <PropertyRef Name="IdResultadoEvaluacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

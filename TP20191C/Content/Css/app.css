@@ -60,3 +60,11 @@ div.dataTables_wrapper div.dataTables_length select {
 .pregunta{
     font-size: 16pt;
 }
+
+#body-error {
+    background: #dedede;
+}
+
+.page-wrap {
+    min-height: 100vh;
+}

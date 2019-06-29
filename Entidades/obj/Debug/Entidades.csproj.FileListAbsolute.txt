@@ -1,0 +1,24 @@
+D:\Proyectos\TP20191C\Entidades\bin\Debug\Entidades.dll.config
+D:\Proyectos\TP20191C\Entidades\bin\Debug\Entidades.dll
+D:\Proyectos\TP20191C\Entidades\bin\Debug\Entidades.pdb
+D:\Proyectos\TP20191C\Entidades\bin\Debug\EntityFramework.dll
+D:\Proyectos\TP20191C\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+D:\Proyectos\TP20191C\Entidades\bin\Debug\EntityFramework.xml
+D:\Proyectos\TP20191C\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+D:\Proyectos\TP20191C\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+D:\Proyectos\TP20191C\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\Proyectos\TP20191C\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+D:\Proyectos\TP20191C\Entidades\obj\Debug\Entidades.dll
+D:\Proyectos\TP20191C\Entidades\obj\Debug\Entidades.pdb
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\bin\Debug\Entidades.dll.config
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\bin\Debug\Entidades.dll
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\bin\Debug\Entidades.pdb
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\bin\Debug\EntityFramework.dll
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\bin\Debug\EntityFramework.xml
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\obj\Debug\Entidades.dll
+E:\Documentos\Facu\Programacion Web 3\2019\TP Final\Git\TP20191C\Entidades\obj\Debug\Entidades.pdb
