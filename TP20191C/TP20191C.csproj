@@ -290,7 +290,7 @@
     <Content Include="Views\Shared\EditorTemplates\tinymce_jquery_full.cshtml" />
     <Content Include="Content\Scripts\tinymce\langs\readme.md" />
     <Content Include="Content\Scripts\tinymce\skins\ui\oxide\fonts\tinymce-mobile.woff" />
-    <Content Include="Views\Alumnos\VerRepuesta.cshtml" />
+    <Content Include="Views\Alumnos\VerRespuesta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

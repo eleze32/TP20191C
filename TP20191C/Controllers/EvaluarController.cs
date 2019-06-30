@@ -14,12 +14,13 @@ namespace TP20191C.Controllers
 
             EvaluadorServicio.MarcarComoMejorRespuesta(idRespuesta);
 
-            //Falta enviar mail
+            EmailAAlumnosServicio correo = new EmailAAlumnosServicio();
+            correo.GenerarEmailMejorRespuesta(idRespuesta);
 
             return RedirectToAction("EvaluarRespuesta", "Profesor", new { idPregunta = idPreg, filtro = -1 });            
         }
 
-        // profesor marca una respuesta como la mejor
+        // profesor evalua una respuesta como correcta, regular o mal
         public ActionResult EvaluarRespuesta()
         {
             int idRespuesta = Convert.ToInt32(Request.QueryString["idRespuesta"]);
@@ -28,7 +29,8 @@ namespace TP20191C.Controllers
 
             EvaluadorServicio.EvaluacionDeRespuesta(idRespuesta,idResultadoEvaluacion);
 
-            //Falta enviar mail
+            EmailAAlumnosServicio correo = new EmailAAlumnosServicio();
+            correo.GenerarEmailResultadoEvaluacion(idRespuesta);
 
             return RedirectToAction("EvaluarRespuesta", "Profesor", new { idPregunta = idPreg, filtro = -1 });
         }

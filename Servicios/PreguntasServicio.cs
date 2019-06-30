@@ -38,5 +38,52 @@ namespace Servicios
 
             return pregunta;
         }
+
+        public static RespuestaAlumno verRespuesta(int idAlumno, int idPregunta)
+        {
+            TP_20191CEntities ctx = new TP_20191CEntities();
+            RespuestaAlumno ra = ctx.RespuestaAlumno.Where(a => a.IdPregunta == idPregunta && a.IdAlumno == idAlumno).FirstOrDefault();
+            return ra;
+        }
+
+        public static bool verFechaPreguntaValida(int idPregunta)
+        {
+            TP_20191CEntities ctx = new TP_20191CEntities();
+            Pregunta p = ctx.Pregunta.Where(a => a.IdPregunta == idPregunta).FirstOrDefault();
+            if (p.FechaDisponibleHasta == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool plazoFecha(int idPregunta)
+        {
+
+            TP_20191CEntities ctx = new TP_20191CEntities();
+            Pregunta p = ctx.Pregunta.Where(a => a.IdPregunta == idPregunta).FirstOrDefault();
+
+            DateTime fechaHasta = p.FechaDisponibleHasta ?? DateTime.Now;
+
+            if (p.FechaDisponibleHasta == null)
+            {
+                return true;
+            }
+            else
+            {
+                int fecha = DateTime.Compare(fechaHasta, DateTime.Now);
+                if (fecha <= 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

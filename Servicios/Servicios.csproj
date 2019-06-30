@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlumnoServicio.cs" />
+    <Compile Include="EmailAAlumnosServicio.cs" />
+    <Compile Include="EmailServicio.cs" />
     <Compile Include="EvaluadorServicio.cs" />
     <Compile Include="PreguntasServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

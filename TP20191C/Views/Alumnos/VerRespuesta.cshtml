@@ -1,0 +1,59 @@
+﻿@using Entidades
+@model RespuestaAlumno
+@{
+    ViewBag.Title = "Ver";
+    Layout = "~/Views/Shared/AlumnosLayout.cshtml";
+}
+
+<div id="repuesta-alumno">
+    <section>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h6 class="d-inline-block mb-0 ml-4 mt-4"><strong>@Model.Pregunta.Clase.Nombre - @Model.Pregunta.Tema.Nombre</strong></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="pregunta mb-0">@Model.Pregunta.Nro . @Model.Pregunta.Pregunta1</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="pregunta d-inline-block ml-4 text-success">
+                            @if (Model.ResultadoEvaluacion == null)
+                            {<span>Correccion Pendiente!</span> }
+                            else
+                            { @Model.ResultadoEvaluacion.Resultado} |
+                            @Model.Orden ° |
+                            @if (Model.Puntos == null) { }
+                            else
+                            {@Model.Puntos <span>pt</span>} |
+                            @if (Model.MejorRespuesta)
+                            {<span>Mejor Repuesta</span>}
+                        </h2>
+                    </div>
+                    @if (ViewBag.plazo)
+                    {
+                        <div class="col-sm-12">
+                            Plazo vencido: @Model.Pregunta.FechaDisponibleDesde - @Model.Pregunta.FechaDisponibleHasta
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                @Html.TextArea("Repuesta", Model.Respuesta, new { @class = "form-control", @id = "Repuesta", @readonly = "readonly" })
+            </div>
+        </div>
+        <div class="row mt-4 mb-5">
+            <div class="col-sm-2">
+                @Html.ActionLink("Volver", "VerPreguntas", null, new { @class = "btn btn-danger btn-block" })
+            </div>
+        </div>
+    </section>
+
+</div>
+
