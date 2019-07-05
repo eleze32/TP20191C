@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C8D2C30B-648E-4E57-A4F6-30A0DC421EA1}</ProjectGuid>
+    <ProjectGuid>{92903AC8-EB94-4EC8-98FC-806E6991D977}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Servicios</RootNamespace>
@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -49,20 +50,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABMPreguntasServicio.cs" />
     <Compile Include="AlumnoServicio.cs" />
+    <Compile Include="ClaseServicio.cs" />
+    <Compile Include="EmailServicio.cs" />
+    <Compile Include="EvaluadorServicio.cs" />
     <Compile Include="PreguntasServicio.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RespuestasServicio.cs" />
+    <Compile Include="TemaServicio.cs" />
     <Compile Include="UsuarioServicio.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{ff3d3fd6-8485-4ca1-8a21-f337a3981bf3}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{49fb20c2-a7dc-41f5-be71-0fb9d54e7edd}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

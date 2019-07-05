@@ -1,4 +1,5 @@
-﻿    Layout = "~/Views/Shared/BaseLayout.cshtml";
+﻿@{
+    Layout = "~/Views/Shared/BaseLayout.cshtml";
 }
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="cabecera">
@@ -11,19 +12,16 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Inicio </a>
+                    <a class="nav-link" href="/profesores/preguntas">Inicio </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Preguntas</a>
+                    <a class="nav-link" href="/profesores/preguntas">Preguntas</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Crear Pregunta <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/profesores/preguntas/crear">Crear Pregunta <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Repuestas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca De</a>
+                    <a class="nav-link" href="/Profesor/acerca-de">Acerca De</a>
                 </li>
             </ul>
             <ul class="navbar-nav mr-auto my-2 my-lg-0">
@@ -31,7 +29,8 @@
                     <a class="nav-link" href="#">@Session["Usuario"] (Profesor)</a>
                 </li>
                 <li class="nav-item">
-                    @Html.ActionLink("Salir", "Salir", "Home", null, new { @class = "nav-link" })
+                    <a class="nav-link" href="/profesores/inicio/salir">Salir</a>
+                   
                 </li>
             </ul>
         </div>

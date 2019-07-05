@@ -1,3 +1,18 @@
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\Servicios.dll
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\Servicios.pdb
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\EntityFramework.dll
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\EntityFramework.xml
+C:\Users\el-ez\Desktop\TP20191C\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+C:\Users\el-ez\Desktop\TP20191C\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\el-ez\Desktop\TP20191C\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+C:\Users\el-ez\Desktop\TP20191C\Servicios\obj\Debug\Servicios.dll
+C:\Users\el-ez\Desktop\TP20191C\Servicios\obj\Debug\Servicios.pdb
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\Servicios.dll.config
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\Entidades.dll
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\Entidades.pdb
+C:\Users\el-ez\Desktop\TP20191C\Servicios\bin\Debug\Entidades.dll.config
 D:\Proyectos\TP20191C\Servicios\bin\Debug\Servicios.dll.config
 D:\Proyectos\TP20191C\Servicios\bin\Debug\Servicios.dll
 D:\Proyectos\TP20191C\Servicios\bin\Debug\Servicios.pdb
@@ -13,3 +28,39 @@ D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cac
 D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.csproj.CopyComplete
 D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.dll
 D:\Proyectos\TP20191C\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Servicios.dll.config
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Servicios.dll
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Entidades.dll
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\EntityFramework.dll
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Entidades.pdb
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Entidades.dll.config
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\EntityFramework.xml
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.dll
+C:\Users\Hasheth\Desktop\WEB 3\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.pdb
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Servicios.dll.config
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Servicios.dll
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Servicios.pdb
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Entidades.dll
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\EntityFramework.dll
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\System.Web.Mvc.dll
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Entidades.pdb
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\Entidades.dll.config
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\EntityFramework.xml
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\System.Web.Mvc.xml
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.dll
+C:\Users\el-ez\Desktop\TP FINAL\TP20191C\TP20191C\Servicios\obj\Debug\Servicios.pdb
+D:\Proyectos\TP20191C\Servicios\bin\Debug\System.Web.Mvc.dll
+D:\Proyectos\TP20191C\Servicios\bin\Debug\System.Web.Mvc.xml
+D:\Proyectos\TP20191C\Servicios\bin\Debug\es\System.Web.Mvc.resources.dll

@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AlumnosController.cs" />
+    <Compile Include="Controllers\EvaluarController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Global.asax.cs">
@@ -163,6 +164,7 @@
     <Content Include="Content\Css\DataTable\dataTables.bootstrap4.min.css" />
     <Content Include="Content\Css\Fontawesome\all.css" />
     <Content Include="Content\Css\Fontawesome\all.min.css" />
+    <Content Include="Content\img\acercade.jpg" />
     <Content Include="Content\Scripts\admin-preguntas\admin-preguntas.js" />
     <Content Include="Content\Scripts\app.js" />
     <Content Include="Content\Scripts\Bootstrap\bootstrap.js" />
@@ -251,7 +253,9 @@
     <Content Include="Content\Scripts\modernizr-2.6.2.js" />
     <Content Include="Content\Scripts\Respond\respond.js" />
     <Content Include="Content\Scripts\Respond\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -267,7 +271,6 @@
     <Content Include="Views\Shared\ProfesoresLayout.cshtml" />
     <Content Include="Views\Shared\AlumnosLayout.cshtml" />
     <Content Include="Views\Shared\pv_Footer.cshtml" />
-    <Content Include="Views\Profesor\CrearPregunta.cshtml" />
     <Content Include="Views\Home\Ingresar.cshtml" />
     <Content Include="Views\Profesor\AdministrarPreguntas.cshtml" />
     <Content Include="Content\webfonts\fa-brands-400.eot" />
@@ -283,13 +286,15 @@
     <Content Include="Content\webfonts\fa-solid-900.woff" />
     <Content Include="Content\webfonts\fa-solid-900.woff2" />
     <Content Include="Views\Profesor\ModificarPregunta.cshtml" />
-    <Content Include="Views\Profesor\EvaluarRepuesta.cshtml" />
-    <Content Include="Views\Alumnos\VerPreguntas.cshtml" />
-    <Content Include="Views\Alumnos\ResponderPregunta.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_jquery_full.cshtml" />
     <Content Include="Content\Scripts\tinymce\langs\readme.md" />
     <Content Include="Content\Scripts\tinymce\skins\ui\oxide\fonts\tinymce-mobile.woff" />
-    <Content Include="Views\Alumnos\VerRepuesta.cshtml" />
+    <Content Include="Views\Profesor\CrearPregunta.cshtml" />
+    <Content Include="Views\Alumnos\ResponderPregunta.cshtml" />
+    <Content Include="Views\Alumnos\VerPreguntas.cshtml" />
+    <Content Include="Views\Alumnos\VerRespuesta.cshtml" />
+    <Content Include="Views\Profesor\EvaluarRespuestas.cshtml" />
+    <Content Include="Views\Alumnos\acerca-de.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -300,11 +305,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{ff3d3fd6-8485-4ca1-8a21-f337a3981bf3}</Project>
+      <Project>{49fb20c2-a7dc-41f5-be71-0fb9d54e7edd}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
     <ProjectReference Include="..\Servicios\Servicios.csproj">
-      <Project>{c8d2c30b-648e-4e57-a4f6-30a0dc421ea1}</Project>
+      <Project>{92903ac8-eb94-4ec8-98fc-806e6991d977}</Project>
       <Name>Servicios</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿
+﻿@model Entidades.ModelView.UsuarioViewModel
+
 @{
     ViewBag.Title = "Ingresar";
     Layout = "~/Views/Shared/AnonimoLayout.cshtml";
@@ -23,16 +24,18 @@
                     </div>
                 }
                 <div class="form-group">
-
-                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Ingresar email">
+                    @Html.TextBoxFor(n=>n.Email,new { @class="form-control", type="email",placeholder="Ingresar mail", })
+                    @Html.ValidationMessageFor(n=>n.Email,"",new { @class="text-danger"})
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Ingresar contraseña">
+                    @Html.TextBoxFor(n => n.Password, new { @class = "form-control", type = "password", placeholder = "Ingresar password.", })
+                    @Html.ValidationMessageFor(n => n.Password, "", new { @class = "text-danger" })
                 </div>
                 <div class="form-group">
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="soyProfesor" value="true" name="soyProfesor">
-                        <label class="custom-control-label" for="soyProfesor">Soy profesor</label>
+                        @Html.CheckBoxFor(n => n.SoyProf,new { @class= "custom-control-input",value="true" })
+                        @Html.LabelFor(n=>n.SoyProf,new { @class= "custom-control-label" })
+                        
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Ingresar</button>

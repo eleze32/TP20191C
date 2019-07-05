@@ -11,6 +11,8 @@ namespace Entidades
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
     
     public partial class RespuestaAlumno
     {
@@ -18,6 +20,8 @@ namespace Entidades
         public int IdPregunta { get; set; }
         public int IdAlumno { get; set; }
         public System.DateTime FechaHoraRespuesta { get; set; }
+        [Required(ErrorMessage ="Por favor debe ingresar una repuesta.")]
+        [AllowHtml]
         public string Respuesta { get; set; }
         public int Orden { get; set; }
         public Nullable<int> IdProfesorEvaluador { get; set; }

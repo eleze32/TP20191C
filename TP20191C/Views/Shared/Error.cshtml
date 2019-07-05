@@ -1,8 +1,15 @@
 ﻿@{
-    Layout = "~/Views/Shared/BaseLayout.cshtml";
+    Layout = "~/Views/Shared/AnonimoLayout.cshtml";
 }
 
-<hgroup>
-    <h1>Error.</h1>
-    <h2>Error al procesar la solicitud.</h2>
-</hgroup>
+<div class="page-wrap d-flex flex-row align-items-center bg-info" id="error">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <h1 class="display-1 text-white">@ViewBag.NroError <i class="fa fa-exclamation-triangle text-danger"></i></h1>
+                <h1 class="display-3">@ViewBag.Title</h1>
+                <div class="mb-4 lead">@ViewBag.Description</div>
+            </div>
+        </div>
+    </div>
+</div>

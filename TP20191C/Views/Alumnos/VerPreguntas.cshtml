@@ -1,9 +1,11 @@
-﻿
+﻿@using Entidades
+@using Entidades.ModelView
+@model List<ListarVerPreguntas>
+
 @{
     ViewBag.Title = "VerPreguntasAlumnos";
     Layout = "~/Views/Shared/AlumnosLayout.cshtml";
 }
-
 <div id="preguntas-alumnos">
     <section class="titulo-pagina">
         <div class="row">
@@ -14,58 +16,97 @@
     </section>
     <section id="texto-filtros">
         <div class="row">
-            <div class="col-sm-9">
+            <div class="col-sm-12">
                 <p>
                     Recuerda que cuanto antes responda correctamente, mas chance tiene de sumar un mejor puntajes,
                     y su tu repuesta es la más completa,recibirás un puntaje bonus!
                 </p>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Todas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sin corregir</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Correctas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Regular</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Mal</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
-    </section>
-    <section id="preguntas-alumnos">
-        @for (int i = 16; i > 0; i--)
-        {
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="row ml-4 mt-4">
-                        <div class="col-sm-12">
-                            <p class="d-inline-block mb-0"><strong>Clase 6 - Entity Framework</strong></p>
-                            <p class="d-inline-block mb-0">Hasta 24/05/2019 23:59:59</p>
+        <div class="container">
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    @Html.ActionLink("Todas", "VerPreguntas","Alumnos",new { filtro = -1 },new { @class="nav-link"})
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Sin Corregir", "VerPreguntas","Alumnos", new { filtro = 0 }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Correctas", "VerPreguntas", "Alumnos", new { filtro = 1 }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Regular", "VerPreguntas", "Alumnos", new { filtro = 2 }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Mal", "VerPreguntas", "Alumnos", new { filtro = 3 }, new { @class = "nav-link" })
+                </li>
+            </ul>
+
+            <br />
+            <!--</section>-->
+            <div class="tab-content">
+                <div id="Todas" class="tab-pane fade in active show">
+                    @foreach (ListarVerPreguntas l in Model)
+                    {
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row ml-4 mt-4">
+                                    <div class="col-sm-12">
+                                        <p class="d-inline-block mb-0"><strong>@l.Clase - @l.Tema</strong></p>
+                                        <p class="d-inline-block mb-0">Hasta @l.Fecha</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <p class="pregunta">@l.Nro. @l.Pregunta</p>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <p class="d-inline-block text-success">
+                                            @{DateTime fechaHasta = l.Fecha ?? DateTime.Now;
+                                                int fecha = DateTime.Compare(fechaHasta, DateTime.Now);
+                                            }
+
+                                            @if (l.Orden == 0 && fecha <= 0)
+                                            {
+                                                <span>PLAZO VENCIDO @l.InicioFecha - @l.Fecha</span>
+                                            }
+                                            else
+                                            {
+                                                if (l.Orden == 0 && fecha >= 1)
+                                                {
+                                                    @Html.ActionLink("Responder", "ResponderPregunta", "Alumnos", new { id = l.IdPregunta }, new { @class = "text-info" })
+                                                }
+                                                else
+                                                {
+                                                    @Html.ActionLink("Ver", "VerRespuesta", "Alumnos", new { id = l.IdPregunta }, new { @class = "text-info" })<span> | </span>
+                                                }
+                                            }
+
+                                            @if (l.Resultado.Equals("NULL") && l.Orden != 0)
+                                            {<span>Correccion Pendiente! |</span>}
+                                            
+                                            @if (!l.Resultado.Equals("NULL"))
+                                            {@l.Resultado<span>|</span>} 
+                                            
+                                            @if (!l.Resultado.Equals("NULL"))
+                                            {@l.Orden <span>° |</span>} 
+                                            
+                                            @if (!l.Resultado.Equals("NULL"))
+                                            {@l.Puntos <span>pts |</span>} 
+                                            
+                                            @if (l.MejorRespuesta)
+                                            {<span>Mejor Respuesta!!!!</span>}
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-7">
-                            <p class="pregunta">@i. ¿Entity Framework solo se puede usar con Sql Server?</p>
-                        </div>
-                        <div class-sm-5>
-                            @Html.ActionLink("Responder", "ponerALgo",null,new { @class="text-info"})
-                            @Html.ActionLink("Ver", "ponerALgo", null, new { @class = "text-info" })
-                            <p class="d-inline-block text-success"> Correcta | 8° | 1000pts | Mejor Repuesta</p>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
-        }
+
+        </div>
     </section>
 </div>

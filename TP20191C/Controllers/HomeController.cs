@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Security;
 using System.Web.Mvc;
-using Entidades;
 using Servicios;
+using Entidades;
+using Entidades.ModelView;
+using System.Web.Security;
 
 namespace TP20191C.Controllers
 {
@@ -15,45 +16,50 @@ namespace TP20191C.Controllers
         [Authorize]
         public ActionResult Inicio()
         {
-            /*if(Session["Usuario"] != null)
-            {*/
+            if(Session["Usuario"] == null)
+                return RedirectToAction("Ingresar", "Home");
+
+            if ((string)Session["TipoUsuario"] == "Profesor")
+                return RedirectToAction("AdministrarPreguntas", "Profesor");
+            //return RedirectToAction("Error", "Home", new { @error = 404 });
+
             List<Alumno> al = AlumnoServicio.TablaPosiciones();
-
-            ViewBag.Preguntas = PreguntasServicio.ultimasDospreguntas();
-
-
-
+            ViewBag.Preguntas = PreguntasServicio.UltimasDospreguntas();
+            ViewBag.SinResponder = PreguntasServicio.preguntasSinResponder((int)Session["UsuarioId"]);
             return View(al);
-            /*}*/
-
-            /*return View();*/
         }
 
-        public ActionResult Ingresar(String returnUrl)
+        public ActionResult Ingresar(String ReturnUrl)
         {
-            ViewBag.returnUrl = returnUrl;
+            ViewBag.returnUrl = ReturnUrl;
             return View();
         }
-
+        
         [HttpPost]
-        public ActionResult Ingresar(string email, string password, string returnUrl, bool soyProfesor = false)
+        public ActionResult Ingresar(UsuarioViewModel usuario, string ReturnUrl)
         {
-            bool login = UsuarioServicio.ingresar(email, password, soyProfesor);
+            bool login;
+            if (!ModelState.IsValid)
+            {
+                ViewBag.returnUrl = ReturnUrl;
+                return View(usuario);
+            }
+            
+            login = UsuarioServicio.Ingresar(usuario);
 
             if (login)
             {
-                FormsAuthentication.SetAuthCookie(email, false);
+                FormsAuthentication.SetAuthCookie(usuario.Email, false);
 
-                if (Url.IsLocalUrl(returnUrl))
-                    return Redirect(returnUrl);
+                if (Url.IsLocalUrl(ReturnUrl))
+                    return Redirect(ReturnUrl);
 
-                if (soyProfesor)
+                if (usuario.SoyProf)
                     return RedirectToAction("AdministrarPreguntas", "Profesor");
 
                 return RedirectToAction("Inicio", "Home");
             }
-
-            ViewBag.returnUrl = returnUrl;
+            ViewBag.returnUrl = ReturnUrl;
             ViewBag.MensajeError = true;
             return View();
         }
@@ -61,8 +67,36 @@ namespace TP20191C.Controllers
         public ActionResult Salir()
         {
             Session["Usuario"] = null;
+            Session["UsuarioId"] = null;
+            Session["TipoUsuario"] = null;
             FormsAuthentication.SignOut();
-            return RedirectToAction("Ingresar", "Home");
+            return RedirectToAction("Ingresar","Home");
+        }
+
+        public ActionResult Error(int error = 0)
+        {
+            switch (error)
+            {
+                case 505:
+                    ViewBag.NroError = "505";
+                    ViewBag.Title = "Ocurrio un error inesperado";
+                    ViewBag.Description = "Esto es muy vergonzoso, esperemos que no vuelva a pasar ..";
+                    break;
+
+                case 404:
+                    ViewBag.NroError = "404";
+                    ViewBag.Title = "Página no encontrada";
+                    ViewBag.Description = "La URL que está intentando ingresar no existe";
+                    break;
+
+                default:
+                    ViewBag.Title = "Página no encontrada";
+                    ViewBag.Description = "Algo salio muy mal :( ..";
+                    break;
+            }
+
+            return View();
+
         }
     }
 }

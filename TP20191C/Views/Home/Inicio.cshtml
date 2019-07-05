@@ -98,19 +98,39 @@
         <section id="puntajes-por-preguntas">
             <div class="row">
                 <div class="col-sm-12">
-                    <h4>Preguntas última clase(Clase 5)</h4>
+                    <h4>Preguntas última clase(@ViewBag.Preguntas[0].Clase.Nombre)</h4>
                 </div>
             </div>
             <div class="row">
 
-                @foreach (Pregunta pr in ViewBag.Preguntas)
+                @foreach(Pregunta pr in ViewBag.Preguntas)
                 {
                     <div class="col-sm-6">
-                        <h5>@pr.Nro. @pr.Pregunta1 @pr.Clase.Nombre </h5>
+                        <h5>@pr.Nro. @pr.Pregunta1 </h5>
+                        <ol>
+                            @foreach (RespuestaAlumno ra in pr.RespuestaAlumno)
+                            {
+                            <li>
+                                @if (ra.Alumno.IdAlumno == (int)Session["UsuarioId"])
+                                {
+                                    <strong>@ra.Alumno.Nombre @ra.Alumno.Apellido +@ra.Puntos </strong>
+                                }
+                                else
+                                {
+                                    <span>@ra.Alumno.Nombre @ra.Alumno.Apellido +@ra.Puntos</span>
+                                }
+
+                                @if (ra.MejorRespuesta)
+                                {
+                                 <i class="fas fa-award text-success ml-1"></i>
+                                }
+                            </li>
+                            }
+                        </ol>
                     </div>
-
+                        
                 }
-
+                
             </div>
         </section>
     </div>
@@ -124,9 +144,13 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            @for (int j = 0; j < 3; j++)
+
+            @foreach (Entidades.ModelView.PreguntaRespuestaAlumno p in ViewBag.SinResponder)
             {
-                @Html.ActionLink((j + 10) + ".¿Preguntas siguiente?", "Ver")<br />
+                <div class="col-sm-12">
+                    <a href="/Alumnos/ResponderPregunta/@p.IdPregunta">@p.Nro. @p.Pregunta</a>
+                </div>
+
             }
         </div>
     </div>

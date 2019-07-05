@@ -20,7 +20,7 @@ namespace Servicios
              Se crea objeto de tipo anonimo para guardar las columna necesarias. Despues los ordeno. Se crea la lista
              ya ordenada pero con tipo anonimo. Despues se vuelve a hacer un select para crear objetos alumnos y a partir
              de ahi crea la lista de alumnos.*/
-            List<Alumno> alumnos = ctx.Alumno.OrderByDescending(x => x.PuntosTotales).
+            List <Alumno>  alumnos = ctx.Alumno.OrderByDescending(x => x.PuntosTotales).
                 ThenByDescending(x => x.CantidadRespuestasCorrectas).ThenByDescending(x => x.CantidadMejorRespuesta).
                 ToList();
 
